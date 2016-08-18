@@ -1,0 +1,181 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font:12px Arial;
+}
+div{
+	display: block;
+}
+img{
+    border: 0;
+}
+input {
+    border: 0;
+    padding: 0;
+}
+a {
+    color: #00c;
+}
+.wrapper{
+	position: relative;
+    padding-bottom: 0;
+    min-width: 810px;
+    min-height: 600px;
+    height: 100%;
+    width: 100%;
+}
+.nav_bar{
+    position: relative;
+}
+#ul{
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 19px 0 5px 0;
+	padding: 0 96px 0 0;
+}
+#ul a.nav, #ul a.nav:visited{
+	float: left;
+	color: #333;
+	font-weight: bold;
+	line-height: 24px;
+	margin-left: 20px;
+	font-size: 13px;
+	text-decoration: underline; 
+}
+#ul a.lb, #ul a.lb:visited{
+    display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+#ul a.pf, #ul a.pf:visited {
+    display: inline-block;
+    float: left;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+#ul a.bri, #ul a.bri:visited {
+    display: inline-block;
+    position: absolute;
+    float: left;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    overflow: hidden;
+}
+.mainer{
+	top: 160px;
+	position: relative;
+}
+#logo{
+	position: relative;
+	text-align: center;
+}
+#s_form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+}
+#kw {
+    position: relative;
+}
+#su{
+	position: relative;
+}
+.s_ipt_wr {
+    border: 1px solid;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    height: 34px;
+    margin-right: 0;
+    border-color: #3385ff #3385ff #3385ff #3385ff;
+    overflow: hidden;
+    float: left;
+}
+.s_ipt {
+    width: 526px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+.s_btn_wr {
+	float: left;
+}
+.s_btn {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 1px solid #2d78f4;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+#su.bg.s_btn:hover{
+	background: #317ef3;
+	box-shadow: 1px 1px 1px #ccc;
+}
+#ftCon {
+    height: 100px;
+    bottom: -50%;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+}
+#ftConw {
+    width: 720px;
+    margin: 0 auto;
+}
+#lh {
+    margin: 16px 0 5px;
+}
+#lh a {
+    margin: 0 10px;
+}
+#cp, #cp a {
+    color: #666;
+}
+#cp .c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}

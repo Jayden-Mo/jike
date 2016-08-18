@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="document.getElementById('kw').focus();">
+    <div class="wrapper">
+        <header>
+        	<div class="nav_bar">
+	            <nav id="ul">
+	                <a href="http://news.baidu.com" name="news" class="nav">新闻</a>
+	                <a href="http://www.hao123.com" name="hao123" class="nav">hao123</a>
+	                <a href="http://map.baidu.com" name="map" class="nav">地图</a>
+	                <a href="http://v.baidu.com" name="video" class="nav">视频</a>
+	                <a href="http://tieba.baidu.com" name="tieba" class="nav">贴吧</a>
+	                <a href="http://passport.baidu.com" name="login" class="lb">登录</a>
+	                <a href="http://www.baidu.com/gaoji/preference.html" name="setting" class="pf">设置</a>
+	                <a href="http://www.baidu.com/more/" name="more" class="bri">更多产品</a>
+	            </nav>
+            </div>
+        </header>
+        <div class="mainer">
+                    <div id="logo">
+                        <img src="./logo.png" width="270" height="129" alt="百度图片">                      
+                    </div>
+                    <form id="s_form" name="f" class="fm">
+                            <span class="bg s_ipt_wr quickdelete-wrap">
+                        <input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+                    </span>
+                            <span class="bg s_btn_wr">
+                        <input type="submit" id="su" value="百度一下" class="bg s_btn">
+                    </span>
+                        </form>
+        </div>
+        <footer>
+            <div id="ftCon">
+                <div id="ftConw">
+                    <p id="lh"><a id="setf" href="http://www.baidu.com/cache/sethelp/help.html" target="_blank" style="display: inline;">把百度设为主页</a><a href="http://home.baidu.com">关于百度</a><a href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a></p>
+                    <p id="cp">©2015&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

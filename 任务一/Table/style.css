@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 12px;
+	font-family: Arial;
+}
+table{
+	border-collapse:collapse;
+	border: 2px solid green;
+	text-align: center;
+	background-color: transparent;
+}
+.tab{
+	width: 500px;
+	margin: 110px auto;
+}
+.tab td,.tab th{
+	border: 1px dashed green;
+}
+.tab caption{
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+.tab th{
+	height: 30px;
+	font-size: 18px;
+}
+.tab td{
+	height: 26px;
+	font-size: 17px;
+}
+.tab td:hover{
+	background-color: gray;
+	font-weight: bold;
+}
+.tab td.bold{
+	font-weight: bold;
+}
+.tab td.bold:hover{
+	background-color: #ffffbf;
+}
+.container{
+	width: 700px;
+	height: 600px;
+	margin: 0 auto;
+	background-image: url("./bg.png");
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
