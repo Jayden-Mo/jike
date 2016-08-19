@@ -1,0 +1,838 @@
+/* 定义基础样式 */
+a, dd, div, dl, i, img, input, li, p, span, ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+
+button, h1, h2, h3, h4, h5, h6, input, select, textarea {
+    font-size: 100%;
+    font-weight: 400;
+}
+img, input, label, select {
+    vertical-align: middle;
+}
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+a{
+	text-decoration: none;
+}
+
+.container{
+    width: 100%;
+}
+
+/* 头部以及头部内部的样式 */
+
+#header{
+	min-height: 70px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+#header .logo {
+    float: left;
+    width: 113px;
+    margin-top: 5px;
+}
+
+/* 顶部搜索栏，定位采用绝对定位方式 */
+
+.search-section {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    margin: 0 0 0 -190px;
+    width: 380px;
+    height: 38px;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 2000;
+}
+.search-section .search-text {
+    width: 100%;
+    height: 36px;
+    padding: 9px 150px 9px 15px;
+    border: 0;
+    line-height: 18px;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    text-align: left;
+}
+
+/* 搜索按钮以及美化样式 */
+
+.search-section .search-btn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 38px;
+    border: 1px solid #dfdfdf;
+    color: #6d6d6d;
+    background: url(http://s1.jikexueyuan.com/common/images/topsearch-icon_e1f5df2.png) center center no-repeat;
+    cursor: pointer;
+}
+.search-section .search-btn:hover{
+	border: 1px solid #35b558;
+	background: #35b558 url(http://s1.jikexueyuan.com/common/images/topsearch-icon2_8c8d8b0.png) center center no-repeat!important;
+}
+.search-section .hot-words {
+    position: absolute;
+    top: 9px;
+    right: 48px;
+    font-size: 12px;
+}
+.search-section .hot-words a {
+    display: inline-block;
+    padding: 1px 3px;
+    margin-left: 5px;
+    color: gray;
+    background: #f3f3f3;
+}
+#header .loginbox{
+    float: right;
+    line-height: 50px;
+    text-align: right;
+    font-size: 12px;
+    color: #333;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+#header .loginbox span a, #header .loginbox span a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 头部样式结束 */
+
+
+/* 定义总体宽度的样式 */
+
+.w-1000 {
+    width: 1000px;
+    margin: 0 auto;
+}
+#header>.wrap{
+	position: relative;
+	z-index: 1000;
+}
+#header>.wrap:after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.loading{
+    width: 1903px;
+    height: 2px;
+    overflow: hidden;
+    background: #35b558;
+    background: -webkit-gradient(linear,10% 10%,100% 100%,color-stop(0.14,#35b550),color-stop(0.5,#8aca8c),color-stop(1,#2d85ca));
+}
+
+/* 极客学院导航条定义 */
+#navbox{
+	height: 42px;
+	position: relative;
+	z-index: 1100;
+	background: rgba(255,255,255,.9);
+	border-bottom: 1px solid #e8e8e8;
+	box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+	-webkit-box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+	-moz-box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+}
+#navbox .nav{
+	height: 42px;
+	position: relative;
+	margin: 0 auto;
+}
+#navbox .nav .navbox {
+    width: 740px;
+}
+#navbox .nav a:nth-child(1) {
+    padding: 0;
+    margin-right: 22px;
+}
+#navbox .nav a:nth-child(1):hover {
+    padding: 0;
+    margin-right: 22px;
+}
+#navbox .nav a {
+	display: inline-block;
+    padding: 0 22px;
+    font-size: 14px;
+    color: #333;
+    line-height: 44px;
+    text-decoration: none;
+}
+#navbox .nav a:hover {
+	display: inline-block;
+    padding: 0 22px;
+    font-size: 14px;
+    color: #35b558;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+/* 导航条的学院需求部分 */
+
+#navbox .nav .user-need{
+	height: 44px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    line-height: 44px;
+    font-size: 12px;
+}
+#navbox .nav .user-need a:nth-child(1) {
+    margin-right: 0!important;
+}
+#navbox .nav .user-need a:nth-child(1):hover {
+    margin-right: 0!important;
+}
+#navbox .nav .user-need a {
+	width: auto;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 12px;
+}
+#navbox .nav .user-need span {
+    display: inline-block;
+}
+#navbox .nav .user-need span img {
+    float: left;
+    margin-right: 5px;
+    margin-top: 14px;
+}
+
+/* 大框架的总体布局，避免页面上下紧贴影响美观 */
+.mar-t20 {
+    margin-top: 20px!important;
+}
+
+/* 定义一个样式来清除浮动防止页面布局错乱 */
+.cf{
+	zoom:1;
+}
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* 左边的全课程导航栏以及内部样式 */
+.lesson-classfiy-nav{
+	position: relative;
+    width: 210px;
+    float: left;
+    border-top: 2px solid #35b558;
+    border-right: 0;
+    height: 307px;
+    border-left: 1px solid #eee;
+    background: url(http://s1.jikexueyuan.com/index/images/nav_r_border_04083a2.jpg) 100% 0 repeat-y;
+}
+.lesson-classfiy-nav ul {
+    position: absolute;
+    z-index: 800;
+    width: 210px;
+    height: 302px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    border-top: 0;
+    overflow: hidden;
+}
+.lesson-classfiy-nav li>div{
+	width: 208px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 10px;
+    border-bottom: 1px solid #eee;
+    background: #fff url(http://s1.jikexueyuan.com/index/images/more-icon_d39346f.png) 186px center no-repeat;
+    background-size: 6px 10px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.lesson-classfiy-nav li>div>a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+.lesson-classfiy-nav .line {
+    position: absolute;
+    z-index: 2000;
+    height: 9px;
+    width: 210px;
+    background: #f9f9f9 url(http://s1.jikexueyuan.com/index/images/alt-d_5632351.png) center center no-repeat;
+    background-size: 7px 3px;
+    bottom: 0;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    border-left: 0;
+}
+.lesson-classfiy-nav li .lesson-list-show {
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+    overflow: hidden;
+    width: 108px;
+    min-height: 447px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    left: 209px;
+    top: -2px;
+    z-index: 100;
+    border-left: 0;
+    display: none;
+    padding-bottom: 30px;
+}
+.lesson-classfiy-nav li div:hover .lesson-list-show{
+	display: block;
+}
+
+/* 主页轮播图框架的搭建 */
+.index-banner{
+	width: 570px;
+	height: 307px;
+	background-color: #eee;
+	float: left;
+	margin-left: 10px;
+	position: relative;
+}
+
+/* 轮播图右边栏提示样式 */
+.lesson-right-show{
+	width: 210px;
+    float: left;
+    border: 1px solid #E4E4E4;
+    height: 307px;
+    overflow: hidden;
+}
+.lesson-right-show .free-box {
+    height: 153px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.lesson-right-show .free-box a {
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+.lesson-right-show .free-box h2 {
+    font-size: 15px;
+    color: #666;
+}
+.lesson-right-show .free-box p {
+    color: #35b558;
+    font-size: 12px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+.lesson-right-show .free-box p span {
+    padding: 5px;
+    color: #35b558;
+}
+.lesson-right-show .free-box button {
+	display: inline-block;
+    width: 168px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border-radius: inherit;
+    margin-top: 10px;
+    cursor: pointer;
+    border-color: #7bda95;
+    outline: 0;
+}
+.greenbtn3{
+	display: inline-block;
+    color: #fff;
+    background: #7bda95;
+    border: 0 none;
+}
+	
+.greenbtn2{
+	background: #f3fff6;
+    border: 1px solid #35b558;
+    color: #35b558;
+}
+
+/* 同样是防止纵向贴紧的整体框架搭建样式 */
+.mar-t30 {
+    margin-top: 30px!important;
+}
+
+/* 热门课程框架以及内部样式定义 */
+.hot-lesson ul{
+	list-style: none;
+    height: 41px;
+    background: url(http://s1.jikexueyuan.com/index/images/hotnav_bc_f22b37e.jpg) 0 100% repeat-x;
+}
+.hot-lesson ul li{
+	float: left;
+    width: 16.6%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+.hot-lesson ul li.on {
+    border-bottom: 2px solid #35b558;
+    background: url(http://s1.jikexueyuan.com/index/images/index-sj_cc73747.png) center bottom no-repeat;
+    background-size: 10px 4px;
+    color: #35b558;
+}
+#hot-lessonbox .lesson-list ul {
+    width: 1100px;
+    margin-top: 0;
+    list-style: none;
+}
+#hot-lessonbox .lesson-list ul li {
+    margin-right: 20px;
+    background: 0 0;
+    margin-bottom: 20px;
+    height: 220px;
+    width: 235px;
+    float: left;
+}
+#hot-lessonbox .lesson-list .lessonimg-box {
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    width: 235px;
+    height: 130px;
+    position: relative;
+}
+
+/* 内部每一个课程表的样式定义 */
+.lesson-list .lessonimg-box .lessonimg {
+    width: 100%;
+    height: 130px;
+}
+#hot-lessonbox .lesson-list .lesson-infor {
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    background: #fff!important;
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+}
+.lesson-list .lesson-infor .lesson-info-h2, .lesson-list .lesson-infor h5 {
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+}
+.lesson-list .lesson-infor .lesson-info-h2 a, .lesson-list .lesson-infor .lesson-info-h2 a:hover, .lesson-list .lesson-infor h5 a, .lesson-list .lesson-infor h5 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+.lesson-list .lesson-infor .timeandicon {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+.lesson-list .lesson-infor .timeandicon dl {
+    width: 120px;
+    float: left;
+    white-space: nowrap;
+}
+.lesson-list .lesson-infor .timeandicon dl dd {
+    font-size: 12px;
+}
+.lesson-list .lesson-infor .timeandicon .time-icon {
+    background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+.lesson-list .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    bottom: 4px;
+}
+.lesson-list .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+
+/* 完成实战路径图的框架搭建 */
+
+.index-public-title {
+    margin-bottom: 16px;
+}
+.index-public-title strong a {
+    color: #333;
+}
+.index-public-title strong {
+    font-size: 18px;
+    float: left;
+    font-weight: 500;
+}
+.index-public-title .way {
+    font-size: 12px;
+    line-height: 13px;
+    color: #fff;
+    background: #999;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin: 5px 8px 0;
+    cursor: pointer;
+}
+.index-public-title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+
+/* 每一个路径的框架以及接下来的样式定义 */
+.learn-card a {
+    width: 20%;
+    border: 1px solid #E4E4E4;
+    float: left;
+    text-align: center;
+    padding: 30px 0;
+    display: block;
+    height: 340px;
+    border-right: 0;
+    overflow: hidden;
+}
+.learn-card a img {
+    margin-bottom: 24px;
+}
+.learn-card a h2 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.learn-card a p {
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    height: 20px;
+    width: 199px;
+    overflow: hidden;
+}
+.learn-card a .greenbtn2, .learn-card a #Waiting-btn {
+    width: 140px;
+    height: 34px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.learn-card a #Waiting-btn {
+    background: #f5f5f5;
+    color: gray;
+    border: 1px solid #e4e4e4;
+    outline: 0;
+}
+.mapbox {
+    border-bottom: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+    width: 1000px;
+    height: 481px;
+    overflow: hidden;
+}
+
+/* 定义一个内部盒子来实现图块的排列 */
+.mapbox .mapbox-1200 {
+    width: 1050px;
+}
+
+
+#system{
+    margin-top: 35px;
+}
+
+/* 知识体系盒子外部框架 */
+.card-transform {
+    width: 167px;
+    height: 120px;
+    border: 1px solid #E4E4E4;
+    border-right: 0;
+    border-bottom: 0;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 反转效果铺垫 */
+.card-transform .back, .card-transform .front {
+    border-bottom: 1px solid #E4E4E4;
+    width: 167px;
+    height: 120px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: .6s;
+    -moz-backface-visibility: hidden;
+    -moz-transition: .6s;
+    -ms-backface-visibility: hidden;
+    -ms-transition: .6s;
+    backface-visibility: hidden;
+    transition: .6s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 可视部分 */
+.card-transform .front {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 15px 0;
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    background-color: #fff;
+}
+/* 反转部分 */
+.card-transform .back {
+    padding-top: 30px;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    background-color: #f5f5f5;
+}
+.card-transform .front img {
+    margin-bottom: 5px;
+    height: 40px;
+    width: 40px;
+}
+.card-transform .front h2 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+}
+.card-transform .front span {
+    font-size: 14px;
+    color: #35b558;
+}
+.card-transform .back strong {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.card-transform .back .greenbtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    width: 140px;
+    height: 36px;
+    cursor: pointer;
+}
+
+/* 以下为底部轮播图样式定义 */
+.mar-t40 {
+    margin-top: 40px!important;
+}
+.index-public-title {
+    margin-bottom: 16px;
+}
+.strategy {
+    border: 1px solid #E4E4E4;
+    height: 90px;
+    padding: 20px;
+    position: relative;
+}
+.swiper-car-box {
+    border: 1px solid #E4E4E4;
+    height: 150px;
+    padding:20px 30px 20px 30px;
+    position: relative;
+}
+.swiper-car {
+    height: 110px;
+    width: 100%;
+}
+.strategy2 {
+    border: 1px solid #E4E4E4;
+    height: 90px;
+    padding: 20px;
+    position: relative;
+}
+
+/* 底部的框架构建以及内部样式的排列 */
+
+#footer {
+    min-width: 1000px;
+}
+.mar-t50 {
+    margin-top: 50px!important;
+}
+
+/* 左边的超级链接部分 */
+
+#footer .jkinfor-block {
+    background: #fafafa;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #e4e4e4;
+}
+#footer .jkinfor-block .jkinfor {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 200px;
+}
+#footer .jkinfor dl {
+    width: 185px;
+    padding-left: 30px;
+    color: gray;
+    margin: 25px 0;
+    float: left;
+    border-left: 1px solid #E4E4E4;
+    min-height: 175px;
+}
+#footer .jkinfor dl dt {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+#footer .jkinfor a {
+    color: gray;
+    padding-left: 5px;
+    font-size: 12px;
+}
+#footer .jkinfor dl dd {
+    font-size: 12px;
+    margin-top: 10px;
+}
+#footer .search-share {
+    width: 260px;
+    float: left;
+    min-height: 226px;
+    border-left: 1px solid #E4E4E4;
+    padding: 20px 0 0 40px;
+}
+#footer .search-share .jktxt {
+    font-size: 15px;
+    color: #35b558;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+#footer .search-share .app-download a {
+    padding-left: 0;
+}
+#footer .search-share .app-download img {
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+#footer .search-share .app-download strong {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 8px;
+}
+#footer .search-share .app-download p {
+    font-size: 14px;
+    color: gray;
+    background: url(http://s1.jikexueyuan.com/common/images/more-icon_d39346f.png) 160px center no-repeat;
+    background-size: 7px 13px;
+}
+#footer .search-share .share {
+    margin-top: 15px;
+}
+#footer .search-share .share a.sina-icon {
+    background-position: -23px 0;
+}
+#footer .search-share .share a.tieba-icon {
+    background-position: -145px 0;
+}
+#footer .search-share .share a.qq-icon {
+    background-position: -23px -82px;
+}
+#footer .search-share .share a {
+    background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) -23px 0 no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* 底部客服栏部分 */
+
+#footer .kefu-online {
+    margin-top: 60px;
+    padding-left: 35px;
+}
+#footer .jkinfor a {
+    color: gray;
+    padding-left: 5px;
+}
+#footer .kefu-online a {
+    display: block;
+    padding: 0;
+}
+#footer .kefu-online .kefu-icon.online {
+    background-position: 0 0;
+}
+#footer .kefu-online .kefu-icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    background: url(http://s1.jikexueyuan.com/common/images/kefu_8edc734.png) no-repeat -40px 0/80px 40px;
+}
+#footer .kefu-online h5 {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+#footer .kefu-online p {
+    color: gray;
+    font-size: 12px;
+    padding-left: 5px;
+}
+#footer .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 20px;
+}
+#footer .copyright a {
+    color: #999;
+    font-weight: normal;
+}

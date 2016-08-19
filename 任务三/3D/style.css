@@ -1,0 +1,261 @@
+/*定义图片大小*/  
+html,body{
+    margin: 0;
+    padding: 0;
+}
+img {  
+    width: 100px;  
+    height: 100px;  
+}  
+  
+.main {  
+    position: absolute;
+    width: 100%;  
+    height: 100%;  
+    z-index: -1  
+}
+.main img{  
+    opacity: 0.5;
+}   
+  
+.bgimg {  
+    position: fixed;  
+    height: 641px;  
+    width: 853px;  
+}  
+  
+.stage {  
+    width: 300px;  
+    height: 300px;  
+    margin: 160px 0 0 250px;  
+}  
+  
+.cube div {  
+    width: 300px;  
+    height: 300px;  
+    position: absolute;  
+    /*border: 1px solid #00F;*/  
+    /*background-color: rgba(255,200,100,0.5);*/  
+    display: block;  
+    border-radius: 5%;  
+}  
+/*通过转换X、Y、Z轴上的角度，实现魔方六个面的位置摆放*/  
+.cube .one {  
+    -webkit-transform: translateZ(150px);  
+    -moz-transform: translateZ(150px);  
+    -ms-transform: translateZ(150px);  
+    transform: translateZ(150px);  
+}  
+  
+.cube .two {  
+    -webkit-transform: rotateX(-90deg) translateZ(150px);  
+    -moz-transform: rotateX(-90deg) translateZ(150px);  
+    -ms-transform: rotateX(-90deg) translateZ(150px);  
+    transform: rotateX(-90deg) translateZ(150px);  
+}  
+  
+.cube .three {  
+    -webkit-transform: rotateX(90deg) translateZ(150px);  
+    -moz-transform: rotateX(90deg) translateZ(150px);  
+    -ms-transform: rotateX(90deg) translateZ(150px);  
+    transform: rotateX(90deg) translateZ(150px);  
+}  
+  
+.cube .four {  
+    -webkit-transform: rotateZ(180deg) rotateY(180deg) translateZ(150px);  
+    -moz-transform: rotateZ(180deg) rotateY(180deg) translateZ(150px);  
+    -ms-transform: rotateZ(180deg) rotateY(180deg) translateZ(150px);  
+    transform: rotateZ(180deg) rotateY(180deg) translateZ(150px);  
+}  
+  
+.cube .five {  
+    -webkit-transform: rotateY(-90deg) translateZ(150px);  
+    -moz-transform: rotateY(-90deg) translateZ(150px);  
+    -ms-transform: rotateY(-90deg) translateZ(150px);  
+    transform: rotateY(-90deg) translateZ(150px);  
+}  
+  
+.cube .six {  
+    -webkit-transform: rotateY(90deg) translateZ(150px);  
+    -moz-transform: rotateY(90deg) translateZ(150px);  
+    -ms-transform: rotateY(90deg) translateZ(150px);  
+    transform: rotateY(90deg) translateZ(150px);  
+}  
+  
+.one div,  
+.two div,  
+.three div,  
+.four div,  
+.five div,  
+.six div {  
+    width: 100px;  
+    height: 100px;  
+    position: absolute;  
+    /*border: 1px solid #000;*/  
+    border-radius: 10%;  
+    /*display: inline-block;*/  
+}  
+
+.one img,  
+.two img,  
+.three img,  
+.four img,  
+.five img,  
+.six img{
+    border-radius: 10%;
+} 
+/*每张图片位置的确定*/  
+.cube div div:nth-child(1) {}  
+  
+.cube div div:nth-child(2) {  
+    left: 100px;  
+}  
+  
+.cube div div:nth-child(3) {  
+    left: 200px;  
+}  
+  
+.cube div div:nth-child(4) {  
+    top: 100px;  
+}  
+  
+.cube div div:nth-child(5) {  
+    top: 100px;  
+    left: 100px;  
+}  
+  
+.cube div div:nth-child(6) {  
+    top: 100px;  
+    left: 200px;  
+}  
+  
+.cube div div:nth-child(7) {  
+    top: 200px;  
+}  
+  
+.cube div div:nth-child(8) {  
+    top: 200px;  
+    left: 100px;  
+}  
+  
+.cube div div:nth-child(9) {  
+    /*background-color: #1F644F;*/  
+    top: 200px;  
+    left: 200px;  
+}  
+/*最后最关键的旋转动画效果来了， 
+感觉看着有些费劲建议看下CSS3的 
+transform，animation属性 
+*/  
+.Ani-rotate {  
+    -webkit-transform-style: preserve-3d;  /*开启3D视图，这样才能看到3D的效果*/  
+    -webkit-animation: rotate 30s infinite;  /*设置动画，动画的名称，动画执行时间，动画执行次数*/  
+    /*margin: 80px;*/  
+    /*-webkit-perspective:2000px;*/  
+    /*-webkit-perspective-origin: -133% 75%;;*/  
+    -webkit-transform-origin: 150px 150px 0px; /*旋转中心点，分别为 X、Y、Z轴上的位置*/  
+    -moz-transform-style: preserve-3d;      /*下面是为了兼容更多浏览器*/  
+    -moz-animation: rotate 30s infinite;  
+    -moz-transform-origin: 150px 150px 0px;  
+    -ms-transform-style: preserve-3d;  
+    -ms-animation: rotate 30s infinite;  
+    -ms-transform-origin: 150px 150px 0px;  
+    animation: rotate 30s infinite;  
+    transform-style: preserve-3d;  
+    transform-origin: 150px 150px 0px;  
+}  
+/*下面是动画的定义，设置不同时间动画的不同状态 
+rotateX、rotateY、rotateZ 为设置在X、Y、Z轴上旋转的角度 
+"-"为逆时针旋转 
+*/  
+@-webkit-keyframes rotate {  
+    from,  
+    to {}  
+    15% {  
+        -webkit-transform: rotateY(-135deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(135deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(225deg)rotateZ(135deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(135deg)rotateX(135deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(135deg)rotateY(225deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-135deg);  
+    }  
+}  
+  
+@-moz-keyframes rotate {  
+    from,  
+    to {}  
+    15% {  
+        -moz-transform: rotateY(-135deg);  
+    }  
+    30% {  
+        -moz-transform: rotateY(-90deg)rotateZ(135deg);  
+    }  
+    45% {  
+        -moz-transform: rotateY(225deg)rotateZ(135deg);  
+    }  
+    60% {  
+        -moz-transform: rotateY(135deg)rotateX(135deg);  
+    }  
+    75% {  
+        -moz-transform: rotateX(135deg)rotateY(225deg);  
+    }  
+    90% {  
+        -moz-transform: rotateX(-135deg);  
+    }  
+}  
+  
+@-ms-keyframes rotate {  
+    from,  
+    to {}  
+    15% {  
+        -ms-transform: rotateY(-135deg);  
+    }  
+    30% {  
+        -ms-transform: rotateY(-90deg)rotateZ(135deg);  
+    }  
+    45% {  
+        -ms-transform: rotateY(225deg)rotateZ(135deg);  
+    }  
+    60% {  
+        -ms-transform: rotateY(135deg)rotateX(135deg);  
+    }  
+    75% {  
+        -ms-transform: rotateX(135deg)rotateY(225deg);  
+    }  
+    90% {  
+        -ms-transform: rotateX(-135deg);  
+    }  
+}  
+  
+@keyframes rotate {  
+    from,  
+    to {}  
+    15% {  
+        transform: rotateY(-135deg);  
+    }  
+    30% {  
+        transform: rotateY(-90deg)rotateZ(135deg);  
+    }  
+    45% {  
+        transform: rotateY(225deg)rotateZ(135deg);  
+    }  
+    60% {  
+        transform: rotateY(135deg)rotateX(135deg);  
+    }  
+    75% {  
+        transform: rotateX(135deg)rotateY(225deg);  
+    }  
+    90% {  
+        transform: rotateX(-135deg);  
+    }  
+}  

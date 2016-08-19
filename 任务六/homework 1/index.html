@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>javascript计算器</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <!--定义简单的样式美化计算器外观-->
+
+</head>
+
+<!--onload相当于页面的构造函数，用来初始化整个页面-->
+
+<body onload="chushihua()">
+    <form class="c-form" name="jisuan">
+        <table class="f-table" border="0" cellspacing="10" align="center" bgcolor="#f3f3f3">
+            <tr>
+                <td colspan="5" align="center">
+                    <input class="t-screen" type="text" size="43" value="0" name="input">
+                </td>
+            </tr>
+            <!--用onclick确定当点击按钮时触发的事件，完成事件绑定-->
+            <tr>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="7" onclick="addNum(7)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="8" onclick="addNum(8)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="9" onclick="addNum(9)">
+                </td>
+                <td>
+                    <input class="bg-orange t-btn" type="button" value="退格" onclick="tuige()">
+                </td>
+                <td>
+                    <input class="bg-orange t-btn" type="button" value="清空" onclick="qingkong()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="4" onclick="addNum(4)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="5" onclick="addNum(5)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="6" onclick="addNum(6)">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="PI" onclick="jisuan.input.value=Math.PI">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="E" onclick="jisuan.input.value=Math.E">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="1" onclick="addNum(1)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="2" onclick="addNum(2)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="3" onclick="addNum(3)">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="+" onclick="caozuo('+')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="-" onclick="caozuo('-')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-gray t-btn t-btn" type="button" value="0" onclick="addNum(0)">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="." onclick="addNum('.')">
+                </td>
+                <td>
+                    <input class="bg-gray t-btn" type="button" value="n!" onclick="jiecheng()">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="*" onclick="caozuo('*')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="/" onclick="caozuo('/')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="sin" onclick="hanshu('sin')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="cos" onclick="hanshu('cos')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="tan" onclick="hanshu('tan')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="(" onclick="caozuo('(')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value=")" onclick="caozuo(')')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="asin" onclick="hanshu('asin')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="acos" onclick="hanshu('acos')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="atan" onclick="hanshu('atan')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="1/X" onclick="hanshu('1/X')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="%" onclick="hanshu('%')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="log" onclick="hanshu('log')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="ln" onclick="hanshu('ln')">
+                </td>
+                <td>
+                    <input class="bg-darkgray t-btn" type="button" value="sqrt" onclick="hanshu('sqrt')">
+                </td>
+                <td colspan="2">
+                    <input class="bg-darkgray t-btn" type="button" value="=" onclick="caozuo('=')" style="width:130px;height:35px;font-size:20px;
+                    font-weight:bold">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!--脚本文件置于页面底部-->
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

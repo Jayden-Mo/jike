@@ -1,0 +1,32 @@
+/* 定义一些简单的样式美化表单*/
+
+#form_results {
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin: 50px auto;
+}
+
+#form_results .ipt {
+    display: inline-block;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5%;
+    border: 1px solid #e8e8e8;
+    box-shadow: 1px 1px 1px #bbbbbb;
+}
+
+#form_results .btn {
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 1px 1px 1px #bbbbbb;
+    background-color: rgb(16, 130, 222);
+    cursor: pointer;
+}

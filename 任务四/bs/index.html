@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  适配手机端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>boorstrap页面</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+    .jumbotron .container {
+        box-sizing: border-box;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header 导航条部分 -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bootstrap简介</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="邮箱"> <!--  邮箱输入框 -->
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="密码"> <!--  密码输入框 -->
+                    </div>
+                    <button type="submit" class="btn btn-success">提交</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- end of Header -->
+
+    <!--  Miiddle Part 1 -->
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>你好，bootstrap!&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:#F96A6A;">缩放页面以响应</small></h1>
+            <p>Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
+            <hr/>
+            <h2>为所有开发者、所有应用场景而设计。</h2>
+            <p>Bootstrap 让前端开发更快速、简单。所有开发者都能快速上手、所有设备都可以适配、所有项目都适用。</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">学习更多&raquo;</a></p>
+        </div>
+    </div>
+
+    <!--  end of Miiddle Part 1 -->
+
+    <!--  Miiddle Part 2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <h2>预处理脚本</h2>
+                <p>虽然可以直接使用 Bootstrap 提供的 CSS 样式表，不要忘记 Bootstrap 的源码是基于最流行的 CSS 预处理脚本 - Less 和 Sass 开发的。你可以采用预编译的 CSS 文件快速开发，也可以从源码定制自己需要的样式</p>
+                <p><a class="btn btn-default btn-lg" role="button">详细资料&raquo;</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h2>一个框架，多种设备</h2>
+                <p>你的网站和应用能在 Bootstrap 的帮助下通过同一份代码快速、有效适配手机、平板、PC 设备，这一切都是 CSS 媒体查询（Media Query）的功劳。</p>
+                <p><a class="btn btn-default btn-lg" role="button">详细资料&raquo;</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h2>特性齐全</h2>
+                <p>Bootstrap 提供了全面、美观的文档。你能在这里找到关于 HTML 元素、HTML 和 CSS 组件、jQuery 插件方面的所有详细文档。</p>
+                <p><a class="btn btn-default btn-lg" role="button">详细资料&raquo;</a></p>
+            </div>
+        </div>
+
+    <!-- end of Miiddle Part 1 -->  
+    
+        <!--  Footer 底部声明 -->  
+
+        <hr width="10%" />
+        <div class="container">
+            <h3 class="text-center">Bootstrap 是完全开源的。它的代码托管、开发、维护都依赖 GitHub 平台。</h3><br/>
+            <button type="button" class="btn btn-primary btn-lg btn-block">查看Github主页&raquo;</button>
+        <hr/>
+        <footer>
+            <p class="text-center">Github<br/>&copy;Company 2014</p>
+        </footer>
+
+        <!--  end of Footer -->
+    </div>
+</body>
+
+</html>

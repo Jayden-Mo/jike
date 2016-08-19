@@ -1,0 +1,771 @@
+/* 定义一些基础CSS */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    *height: 100%;
+    +height: 100%;
+    font-family: arial;
+}
+
+img {
+    border: 0;
+}
+
+/* 构建整体框架的样式 */
+
+.wrapper {
+    position: relative;
+    *position: relative;
+    +position: relative;
+    height: 100%;
+    min-width: 810px;
+    min-height: 600px;
+}
+
+/* 使用绝对定位布局导航条，保证其不随页面变化而变化 */
+
+#ul {
+    z-index: 2;
+    color: white;
+    position: absolute;
+    *position: absolute;
+    +position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px 0;
+    padding: 0 96px 0 0;
+}
+
+/* 导航条内部样式定义 */
+
+#ul .mnav,
+#ul .mnav:visited {
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+#ul .lb,
+#ul .lb:visited {
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+#ul .pf,
+#ul .pf:visited {
+    display: inline-block;
+    float: left;
+    color: #333;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+#ul .bri,
+#ul .bri:visited {
+    display: inline-block;
+    position: absolute;
+    *position: absolute;
+    +position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+#ul .mnav:hover {
+    color: #38f;
+}
+
+#ul .lb:hover {
+    color: #38f;
+}
+
+#ul .pf:hover {
+    color: #38f;
+}
+
+/* 搭建搜索栏框架 */
+
+.s_form {
+    position: relative;
+    *position: relative;
+    +position: relative;
+    top: 380px;
+}
+
+.s_form_wrapper {
+    position: relative;
+    *position: relative;
+    +position: relative;
+    top: -191px;
+    text-align: center;
+}
+
+#search {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    position: relative;
+    *position: relative;
+    +position: relative;
+}
+
+/* 输入外边框样式 */
+
+.ipt_wrpper {
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    height: 36px;
+    line-height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+    float: left;
+    *float: left;
+    +float: left;
+}
+
+.ipt_wrpper:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+/* 输入框样式以及效果 */
+
+.s_ipt {
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    position: relative;
+    *position: relative;
+    +position: relative;
+    +height: 22px;
+    +padding: 0;
+    +line-height: 22px;
+    +font: 16px/18px arial;
+}
+
+/* 为按钮添加样式 */
+
+.btn_wrpper {
+    width: auto;
+    height: auto;
+    border: 0;
+    display: inline-block;
+    *display: inline-block;
+    background-color: #3385ff;
+    z-index: 0;
+    vertical-align: top;
+    position: relative;
+    *position: relative;
+    +position: relative;
+    float: left;
+    *float: left;
+    +float: left;
+}
+
+.s_btn {
+    width: 100px;
+    height: 36px;
+    *height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 0 solid #2d78f4;
+    *border: 0;
+    *border-bottom: 0 solid #3385ff !important;
+    outline: medium;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    background-position: 0 -48px;
+    float: left;
+    padding-left: 18px;
+    *float: left;
+    +float: left;
+}
+
+.s_btn:hover {
+    border: 0 solid #ddd;
+    border-bottom: 1px solid #2868c8;
+    background-color: #317ef3;
+    -webkit-box-shadow: 1px 1px 1px #7F7F7F;
+    -moz-box-shadow: 1px 1px 1px #7F7F7F;
+    box-shadow: 1px 1px 1px #7F7F7F;
+    +height: 36px;
+    +width: 100px;
+    +background-color: #317ef3;
+    +border: 0;
+    +border-bottom: 0;
+}
+
+.s_btn:active {
+    border: 0px solid #ddd;
+    background-color: #3075dc;
+}
+
+/* 底部声明文档，同样绝对定位保证底部不会随页面大小变化而改变位置 */
+
+.footer {
+    height: 100px;
+    position: absolute;
+    *position: absolute;
+    +position: absolute;
+    bottom: -321px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#ftConw {
+    width: 720px;
+    margin: 0 auto;
+}
+
+/* 声明文档内部文字样式 */
+
+#lh {
+    margin: 16px 0 5px;
+}
+
+#lh p,
+#cp p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#lh a {
+    margin: 0 10px;
+    color: #00c;
+    text-decoration: underline;
+    cursor: auto;
+    font: 12px arial;
+}
+
+#cp {
+    color: #666;
+    font: 12px arial;
+    margin: 1px 0 16px;
+}
+
+#cp a {
+    color: #666;
+    font: 12px arial;
+}
+
+#cp .c-icon-icrlogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+    _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_15f748ea.gif);
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+/* 手机端定义一些基础CSS */
+
+body,
+h1,
+h2,
+h3,
+p,
+div,
+ol,
+ul,
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+input,
+button,
+textarea {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    border: 1px solid;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    padding: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+input,
+textarea,
+keygen,
+select,
+button {
+    margin: 0em;
+    font: 13.3333px Arial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+}
+
+input,
+textarea,
+keygen,
+select,
+button,
+meter,
+progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+
+button {
+    outline: 0;
+}
+
+/* 手机端整体容器用min-width */
+
+.m-wrapper{
+    min-width: 300px;
+}
+
+/* 顶部的天气导航条样式 */
+
+#weather {
+    position: relative;
+    height: 0;
+    -webkit-transition: height .3s linear;
+    text-align: left;
+}
+
+.weather-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 9px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.weather-outline>div:first-child {
+    font-size: 30px;
+    color: #818388;
+}
+
+.weather-outline>*,
+.weather-detail-sky>* {
+    display: inline-block;
+}
+
+.weather-status {
+    position: relative;
+    padding: 0 6px;
+    top: 1px;
+}
+
+.weather-status:before {
+    content: '';
+    position: absolute;
+    left: -.5px;
+    height: 35px;
+    border-left: 1px solid #eee;
+}
+
+.weather-status p {
+    height: 13px;
+    line-height: 13px;
+    font-size: 11px;
+    color: #7e818a;
+}
+
+#userinfo-wrap {
+    position: relative;
+    height: 54px;
+}
+
+/* 登录图片，绝对定位 */
+
+#login {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    padding: 7px;
+    color: #B2B4BA;
+    font-size: 28px;
+    line-height: 20px;
+}
+
+/* 百度logo以及输入框定义以及美化 */
+
+#logo {
+    height: 87px;
+    padding: 17px 0 15px;
+    text-align: center
+}
+
+#index-form {
+    margin: 0 10px;
+    border: 1px solid #8d9394;
+    border-radius: 1px;
+    height: 44px;
+    -webkit-box-shadow: 0 1px 1px 0 #dfdfdf;
+    background: #fff;
+}
+
+#index-form .con-wrap {
+    display: -webkit-box;
+}
+
+.se-input {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 7px 42px 7px 6px;
+    height: 42px;
+    line-height: 28px;
+    resize: none;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+}
+
+.se-input,
+.se-encode {
+    display: block;
+    -webkit-box-flex: 1;
+    padding: 6px 35px 6px 6px;
+    font-size: 18px;
+    line-height: 24px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.se-inner {
+    width: 79px;
+    position: relative;
+}
+
+#index-bn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 79px;
+    height: 42px;
+    background: #ececec;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e7e9eb);
+    color: #46484b;
+    -webkit-box-shadow: 0 0 0 1px #fff inset;
+    box-shadow: 0 0 0 1px #fff inset;
+    -webkit-text-shadow: 0 1px 0 #fafafa;
+    text-shadow: 0 1px 0 #fafafa;
+    white-space: nowrap;
+    line-height: 42px;
+    border-left: 1px solid #8d9394;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+/* 以下是页面分体部分 */
+
+/* 手机导航 */
+
+#navs {
+    margin: 17px 0 14px;
+    overflow: hidden;
+}
+
+#navs a:first-child,
+#navs a:nth-child(7) {
+    margin-left: 2%;
+}
+
+#navs a {
+    float: left;
+    width: 16%;
+    font-size: 13px;
+    color: #262626;
+}
+
+#navs a img {
+    display: block;
+    margin: 0 auto 4px;
+}
+
+/* 实用工具 */
+
+#plus-card {
+    position: relative;
+    padding: 2px 10px 10px;
+    display: block;
+}
+
+.plus {
+    border: 1px solid #d9dde2;
+    margin-top: 8px;
+    background: #fff;
+}
+
+.plus-title {
+    position: relative;
+    margin: 2px 14px 0;
+    height: 40px;
+    text-align: left;
+}
+.plus-title h2{
+    color: #818388;
+    font-size: large;
+    margin-top: 15px;
+}
+.plus-title img{
+    position: absolute;
+    top: -11px;
+    right: -4px;
+}
+.plus-content {
+    overflow: hidden;
+    margin-top: -5px;
+    font-size: 14px;
+}
+#nav-list a {
+    float: left;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    padding: 0 6px;
+    width: 25%;
+    height: 42px;
+    line-height: 42px;
+}
+.plus-content a {
+    color: #262626;
+}
+.plus-content a  img{
+    margin-top: 9px;
+}
+.plus-title span {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: -3px;
+}
+.plus-title .roll {
+    position: absolute;
+    right: 43px;
+    top: 0;
+}
+
+/* 热搜的部分 */
+
+#hotword-list {
+    padding: 0 14px;
+    text-align: left;
+}
+#hotword-list li {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 42px;
+    line-height: 42px;
+    vertical-align: top;
+}
+#hotword-list a {
+    display: block;
+    text-align: center;
+}
+
+/* 定义生活服务部分样式 */
+
+#lbs .gps-zone {
+    position: relative;
+    margin: 0 14px 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #262626;
+}
+#lbs .gps-info {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 32px;
+    overflow: hidden;
+}
+#lbs .gps-zone button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #d2d6dd;
+    border-radius: 2px;
+    text-indent: 20px;
+    font-size: 14px;
+}
+#lbs .gps-zone button img{
+    
+}
+#lbs-list {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+#lbs-list li {
+    width: 23%;
+    text-align: center;
+}
+#lbs-list li, #lbs-list a {
+    display: inline-block;
+}
+#lbs-list img {
+    width: 20px;
+}
+#lbs-list a {
+    padding: 0 10px;
+}
+#lbs-list p {
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 3px 0 8px;
+}
+#lbs-list img {
+    width: 46px;
+}
+.osv19 {
+    margin: 0 25px;
+    list-style: none;
+}
+.osv19 li {
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+    position: relative;
+}
+.osv19 a {
+    position: relative;
+    display: block;
+    font-size: 13px;
+    padding-left: 4px;
+    color: #555;
+    background: none no-repeat 0 center;
+    -webkit-background-size: 15px 11px;
+}
+.osv19 img {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/* 手机端脚部美化 */
+
+#foot {
+    margin: 20px 25px 0;
+}
+#foot div a:first-child {
+    float: left;
+}
+#foot div a:last-child {
+    float: right;
+}
+#foot div a {
+    display: inline-block;
+    height: 32px;
+    width: 47%;
+    line-height: 32px;
+    border: 1px solid #ececec;
+    border-radius: 1px;
+    color: #555;
+    font-size: 14px;
+}
+#index-copyright {
+    display: block;
+    font-size: 10px;
+    line-height: 20px;
+    padding: 35px 0 13px;
+    color: #aaa;
+}

@@ -1,0 +1,30 @@
+/* 定义简单的样式来美化计算器的外观 */
+    #tbCalculator td {
+        text-align: center;
+        vertical-align: middle;
+    }
+    .tab-wra{
+    	margin: 100px auto;
+    	background: transparent;
+    	text-align: center;
+    }
+    .btn-b {
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 1px 1px 1px #bbbbbb;
+        background-color: rgb(16, 130, 222);
+        cursor: pointer;
+    }
+    .btn-s {
+        width: 55px;
+        height: 35px;
+        text-align: center;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 1px 1px 1px #bbbbbb;
+        background-color: rgb(16, 130, 222);
+        cursor: pointer;
+    }

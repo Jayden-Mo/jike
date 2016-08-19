@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>寻找字符</title>
+</head>
+
+<body>
+
+    <!-- 无页面结构，在文档底部嵌入脚本 -->
+    <script type="text/javascript">
+    function getMost(array) {
+        var str = array.join("");           //把数组转化成为字符串
+        var maxNum = 0;                     //命名一个变量放置字母出现的最高次数并初始化为0
+        var maxChar = [];                   //存放出现次数最多的字符数组，因为出现最多的字符可能有多个 
+        var seqNum = [];                    //存放出现次数最多的字符所对应在其原数组中的序列号
+        while (str) {
+            var char = str.charAt(0);
+            var arr = str.split(char);
+            n = str.length - arr.join('').length;
+            str = arr.join('');
+            if (n > maxNum) {
+                maxNum = n;
+                maxChar = [char];
+            } else if (n === maxNum) {
+                maxChar.push(char);         //如果出现次数相同的字符；则存入数组里  
+            }
+        }
+
+        for (var i = 0; i < array.length; i++) {        //遍历数组，找到元素在数组中的下标     
+            if (maxChar == array[i]) {
+                seqNum.push('  arr[' + i + ']  ');
+            };
+        };
+
+        return {                  //函数返回需要求出的三个结果
+            'seqNum': seqNum,
+            'maxNum': maxNum,
+            'maxChar': maxChar
+        }
+    }
+
+    var testArr = ["a", "x", "b", "d", "m", "a", "k", "m", "p", "j", "a"];      //声明一个数组类型的变量
+
+    var res = getMost(testArr);
+    alert('出现次数最多的字符：' + res.maxChar + ',  出现次数：' + res.maxNum + ',  所在顺序：' + res.seqNum);
+    </script>
+</body>
+
+</html>

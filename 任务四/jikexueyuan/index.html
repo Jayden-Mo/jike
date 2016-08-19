@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--  适配手机端 -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0">
+
+    <title>极客学院IT在线教育平台-中国最大的IT职业在线教育平台</title>
+
+    <!--  键入关键词 -->
+    <meta name="keywords" content="极客学院,IT职业教育,IT在线教育平台,IT在线教育,IT在线学习,it职业培训,android,ios,flash,java,python,html5,swift,cocos2dx">
+    <meta name="description" content="极客学院作为中国最大IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域,如Android,iOS ,Flash,Java,Python,HTML5,Swift,Cocos2dx等视频教程.根据IT在线学习特点,极客学院推出IT学习知识体系图,IT职业学习实战路径图,帮助IT学习者从零基础起步,结合IT实战案例演练,系统学习,助你快速成为IT优秀技术人才！">
+
+    <!--  导入样式表 -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="http://s1.jikexueyuan.com/common/pkg/common_sync0_libs_833bc90.css">
+    <link rel="stylesheet" href="http://s1.jikexueyuan.com/common/pkg/common_sync1_libs_1951da3.css">
+    <link rel="stylesheet" href="http://s1.jikexueyuan.com/index/pkg/index_sync0_libs_6f5905d.css">
+    <link rel="stylesheet" href="http://s1.jikexueyuan.com/index/widget/meiti/meiti_777a363.css">
+    <link href="http://s1.jikexueyuan.com/index/widget/projectpath/projectpath_6c3eac9.css" rel="stylesheet" class="lazyload" charset="utf-8">
+    <link href="http://s1.jikexueyuan.com/index/widget/enterprise/enterprise_5cd34c4.css" rel="stylesheet" class="lazyload" charset="utf-8">
+    <link href="http://s1.jikexueyuan.com/index/widget/system/system_4027d7f.css" rel="stylesheet" class="lazyload" charset="utf-8">
+
+</head>
+
+<body>
+    <div id="container">
+
+        <!--  头部布局，囊括图标 搜索栏以及选项 -->
+        <div id="header" class="w-1000">
+            <div class="wrap">
+                <a href="http://www.jikexueyuan.com/">
+                    <h2><img src="http://s1.jikexueyuan.com/common/images/logo_c8caff4.png" class="logo" alt="极客学院" /></h2>
+                </a>
+                <div class="search-section">
+                    <div class="headsearch" id="headsearch">
+                        <input class="search-text" type="text" id="web_search_header" placeholder="搜索课程、问答或 Wiki" value="" style="padding-right: 55px;">
+                        <input type="submit" class="search-btn" value="" />
+                        <div class="hot-words" style="display: block;">
+                            <a href="http://search.jikexueyuan.com/course/?q=Android" jktag="&amp;posGP=102001&amp;posArea=9001&amp;posOper=900030&amp;aSS=Android">Android</a>
+                            <a href="http://search.jikexueyuan.com/course/?q=iOS" jktag="&amp;posGP=102001&amp;posArea=9001&amp;posOper=900030&amp;aSS=iOS">iOS</a>
+                            <a href="http://search.jikexueyuan.com/course/?q=HTML5" jktag="&amp;posGP=102001&amp;posArea=9001&amp;posOper=900030&amp;aSS=HTML5">HTML5</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="loginbox">
+                    <a href="http://passport.jikexueyuan.com/connect/qq" style="text-decoration:none;color:#333;" rel="nofollow" jktag="&amp;posGP=112001&amp;posOper=900003"><span>QQ登录</span></a>
+                    <em style="padding: 0px 10px">|</em><span><a href="http://passport.jikexueyuan.com/sso/login" postion="index_index_header" rel="nofollow" jktag="&amp;posGP=112001&amp;posOper=900002">登录</a></span>
+                    <em style="padding: 0px 10px">|</em><span><a href="http://passport.jikexueyuan.com/sso/reg_phone" postion="index_index_header" rel="nofollow" jktag="&amp;posGP=112001&amp;posOper=900001">注册</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="loading"></div>
+
+        <!--  以下是极客学院导航条部分 -->
+        <div class="nav_bar">
+            <div id="navbox">
+                <div class="nav w-1000">
+                    <div class="navbox">
+                        <a href="http://www.jikexueyuan.com/" jktag="&amp;posGP=100001&amp;posArea=9004&amp;posOper=900016">首页</a>
+                        <a href="http://www.jikexueyuan.com/course/" class="" jktag="&amp;posGP=101001&amp;posArea=9004&amp;posOper=900017">职业课程库</a>
+                        <a href="http://www.jikexueyuan.com/path/" class="" jktag="&amp;posGP=1001003&amp;posArea=9004&amp;posOper=900018">知识体系图</a>
+                        <a href="http://www.jikexueyuan.com/practice/" class="" jktag="&amp;posGP=101004&amp;posArea=9004&amp;posOper=900019">实战路径图</a>
+                        <a href="http://wenda.jikexueyuan.com/" class="" jktag="&amp;posGP=104002&amp;posArea=9004&amp;posOper=900020">技术问答</a>
+                        <a href="http://wiki.jikexueyuan.com" jktag="&amp;posGP=117002&amp;posArea=9004&amp;posOper=900028">Wiki</a>
+                    </div>
+                    <div class="user-need">
+                        <a href="http://www.jikexueyuan.com/vip/" jktag="&amp;posGP=114001&amp;posArea=9004&amp;posOper=900021">
+                            <span><img src="http://s1.jikexueyuan.com/common/images/vip-icon_76ae754.png">VIP会员</span>
+                        </a>
+                        <a href="http://press.jikexueyuan.com/topic/" target="_blank" jktag="&amp;posArea=9004&amp;posOper=900022">
+                            <span><img src="http://s1.jikexueyuan.com/common/images/star-icon_c593bc1.png">求课程</span>
+                        </a>
+                        <a href="http://www.jikexueyuan.com/app/" target="_blank" jktag="&amp;posGP=116001&amp;posArea=9004&amp;posOper=900023"><span><img src="http://s1.jikexueyuan.com/common/images/dl-icon_4bc18a7.png">客户端</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  整个页面外围的大框架 -->
+        <div id="pager">
+
+            <!--  下面是顶部的课程选项，分为三个栏目 -->
+            <div class="w-1000 mar-t20 cf">
+
+                <!--  左边的导航栏 -->
+                <div class="lesson-classfiy-nav">
+                    <ul style="border-bottom-width:0px; height:305px; overfloat:hidden; list-style:none;">
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">移动开发</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">前端开发</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">后端开发</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">基础知识</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">云计算&大数据</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">智能硬件&物联网</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">数据库</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">认证考试</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">企业IT</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">软件测试</a></div>
+                        </li>
+                        <li>
+                            <div><a href="http://www.jikexueyuan.com/course/mobile/">设计&产品</a></div>
+                        </li>
+                        <p class="line"></p>
+                    </ul>
+                </div>
+
+                <!--  这里是中间的轮播图框架 -->
+                <div class="index-banner"><img src="./main.png"></div>
+
+                <!--  下面是右边栏 -->
+                <div class="lesson-right-show">
+                    <div class="free-box">
+                        <a href="http://www.jikexueyuan.com/help/introduction.html" target="_blank" jktag="&amp;posGP=110001&amp;posOper=1020&amp;posArea=0009&amp;posColumn=1.1" rel="nofollow">
+                            <h2>极客学院 让学习更有效</h2>
+                            <p>
+                                <span>最新</span>|<span>系统</span>|<span>实战</span>
+                            </p>
+                            <button class="greenbtn3">了解极客学院</button>
+                        </a>
+                    </div>
+                    <div class="free-box">
+                        <a href="http://www.jikexueyuan.com/vip/" target="_blank" jktag="&amp;posGP=114001&amp;posOper=1021&amp;posArea=0010&amp;posColumn=1.1" rel="nofollow">
+                            <h2>成为VIP 极客启程</h2>
+                            <p style="line-height: 1.6;margin: 10px 0 2px">
+                                √&nbsp;全部课程&nbsp;&nbsp;√&nbsp;高清视频
+                                <br>√&nbsp;问答服务&nbsp;&nbsp;√&nbsp;课程资料
+                            </p>
+                            <button class="greenbtn2">了解VIP权益</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  主页的热门课程部分 -->
+            <div class="hot-lesson w-1000 mar-t30" id="recommendName">
+
+                <!--  定义热门课程部分导航条 -->
+                <ul class="cf">
+                    <li class="on">热门推荐</li>
+                    <li>最新课程</li>
+                    <li>免费课程</li>
+                    <li>项目实战</li>
+                    <li>全球首发</li>
+                    <li>企业合作</li>
+                </ul>
+            </div>
+
+            <!--  搭建热门课程容器 -->
+            <div class="w-1000 mar-t20" id="hot-lessonbox">
+                <div class="one-classfiy-lesson lesson-list" style="display: block;">
+                    <ul class="cf">
+
+                        <!--  每一个热门课程的专属容器以完成布局 -->
+                        <li id="2005" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/2005.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2005&amp;posColumn=2005.1">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/15/7c9b/55f7820c4f0ff.jpg" class="lessonimg" title="高级抽象元语 Trident" alt="高级抽象元语 Trident">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2005&amp;posColumn=2005.1"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2005.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2005&amp;posColumn=2005.1">高级抽象元语 Trident</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程将会讲解 Storm 实时处理系统当中一个重要的概念分支：Trident——高级抽象元语，在讲解了 Trident 的概念之后，将辅以实战演练编写基于 Trident 实现的 Storm 实时处理系统实例。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>3课时
+                            38分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon2"></i><em>中级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2088人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/storm/">
+                                                <img width="16" src="http://wirrorcdn.jikexueyuan.com/category/bigdata.png" alt="storm" title="Storm" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2005&amp;posColumn=2005.1&amp;aCCate=storm">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2047" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/2047.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2047&amp;posColumn=2047.2">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/21/a58b/55ff5ea422731.jpg" class="lessonimg" title="Android 入门开发实战之汽车顾问" alt="Android 入门开发实战之汽车顾问">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2047&amp;posColumn=2047.2"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2047.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2047&amp;posColumn=2047.2">Android 入门开发实战之汽车顾问</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程，以一个非常简单的汽车顾问应用为例，来学习如何创建一个 Android 应用程序。这是一个非常入门级的课程，通过课程可以学习到一些基础组件的使用和基本的设计思路。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+                            29分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon"></i><em>初级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2531人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/android/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201411/03/00a1/54578d8e652c3.png" alt="android" title="Android" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2047&amp;posColumn=2047.1&amp;aCCate=android">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2048" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/2048.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2048&amp;posColumn=2048.3">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/21/552d/55ff5ec89c881.jpg" class="lessonimg" title="万能的 React" alt="万能的 React">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2048&amp;posColumn=2048.3"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2048.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2048&amp;posColumn=2048.3">万能的 React</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    除了网页中常见的界面功能，React 还有很多用途。本课程会介绍 React 在桌面程序、游戏、邮件和图表领域的用法。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+                            52分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon2"></i><em>中级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2405人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/javascript/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201502/26/5c02/54eeb768593c6.png" alt="javascript" title="JavaScript" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2048&amp;posColumn=2048.1&amp;aCCate=javascript">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2054" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/2054.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2054&amp;posColumn=2054.4">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/22/ea62/5600b07f2e6f7.jpg" class="lessonimg" title="iOS 设计模式——工厂" alt="iOS 设计模式——工厂">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2054&amp;posColumn=2054.4"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2054.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2054&amp;posColumn=2054.4">iOS 设计模式——工厂</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程主要讲解 iOS 设计模式中的简单工厂以及抽象工厂，并辅以具体实例来实现工厂模式，最后再向大家讲解 Cocoa 框架中常见的工厂类 NSNumber。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+                            48分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon3"></i><em>高级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2200人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/ios/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201411/04/3567/5457df3530e14.png" alt="ios" title="iOS" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2054&amp;posColumn=2054.1&amp;aCCate=ios">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2003" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/2003.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2003&amp;posColumn=2003.5">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/15/898b/55f7775a6044d.jpg" class="lessonimg" title="Python 标准库与其他应用" alt="Python 标准库与其他应用">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2003&amp;posColumn=2003.5"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2003.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2003&amp;posColumn=2003.5">Python 标准库与其他应用</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程主要介绍 Python 的标准库以及其他经常使用的一些东西的第一部分，并配以示例加以理解。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+                            58分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon2"></i><em>中级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2478人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/pythonbase/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201411/03/9301/54578de87b2f1.png" alt="pythonbase" title="Python 基础" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2003&amp;posColumn=2003.1&amp;aCCate=pythonbase">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2017" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <i class="free-icon"></i>
+                                <a href="http://www.jikexueyuan.com/course/2017.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2017&amp;posColumn=2017.6">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/16/58c1/55f8d412da687.jpg" class="lessonimg" title="Java Web 项目：无限级分销系统项目介绍" alt="Java Web 项目：无限级分销系统项目介绍">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2017&amp;posColumn=2017.6"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2017.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2017&amp;posColumn=2017.6">Java Web 项目：无限级分销系统项目介绍</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课主要讲解 Java 无限级分销系统实战项目的概述以及项目中所用到的技术清单，还有学习本系列课程的学习前提和学完后所得达到的技术目标，另外一个重要的就是项目需求分析的讲解与整体项目功能的演示。通过本课程的讲解，学员能掌握该实战项目的整体介绍、学习前提以及学后技能目标和整个项目的业务需求，还有能一览无余的了解到实战项目的整体效果。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>3课时
+                            24分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon2"></i><em>中级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">2593人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/jsp/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201502/26/8cb0/54eeb77cb6992.png" alt="jsp" title="JSP" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2017&amp;posColumn=2017.1&amp;aCCate=jsp">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="1973" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <a href="http://www.jikexueyuan.com/course/1973.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=1973&amp;posColumn=1973.7">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/09/2865/55ef99b9e6be3.jpg" class="lessonimg" title="Android 开发实战：短信验证码自动填写" alt="Android 开发实战：短信验证码自动填写">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=1973&amp;posColumn=1973.7"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1973.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=1973&amp;posColumn=1973.7">Android 开发实战：短信验证码自动填写</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程主要讲解在 Android 中使用短信验证功能时，自动获取发送到用户手机上的验证短信，并将其中的验证码提取出来自动填写到输入框中。通过 ContentObserver 方式监听短信变化，正则方式匹配验证码。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>4课时
+                            35分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon"></i><em>初级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">4075人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/android/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201411/03/00a1/54578d8e652c3.png" alt="android" title="Android" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=1973&amp;posColumn=1973.1&amp;aCCate=android">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="2002" test="0" deg="0" stop="1">
+                            <div class="lessonimg-box">
+                                <i class="free-icon"></i>
+                                <a href="http://www.jikexueyuan.com/course/2002.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2002&amp;posColumn=2002.8">
+                                    <img src="http://a1.jikexueyuan.com/home/201509/15/279c/55f77707a2f5b.jpg" class="lessonimg" title="C 语言五子棋游戏项目分析与系统设计" alt="C 语言五子棋游戏项目分析与系统设计">
+                                    <div class="lessonplay" style="opacity: 0;">
+                                        <i class="playericon" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2002&amp;posColumn=2002.8"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="lesson-infor" style="height: 88px;">
+                                <h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/2002.html" target="_blank" jktag="&amp;posGP=103001&amp;posArea=0002&amp;posOper=1003&amp;aCId=2002&amp;posColumn=2002.8">C 语言五子棋游戏项目分析与系统设计</a></h2>
+                                <p style="height: 0px; opacity: 0; display: none;">
+                                    本课程对五子棋项目进行需求分析，进而进行系统设计，将系统划分成不同的模块，以便分模块完成系统开发。五子棋起源于中国古代，是一种传统的黑白棋种。它是一款能够训练人的逻辑思维严密性的小游戏。
+                                </p>
+                                <div class="timeandicon">
+                                    <div class="cf">
+                                        <dl>
+                                            <dd class="mar-b8"><i class="time-icon"></i><em>3课时
+                            54分钟</em>
+                                            </dd>
+                                            <dd class="zhongji" style="display: none;">
+                                                <i class="xinhao-icon2"></i><em>中级</em>
+                                            </dd>
+                                        </dl>
+                                        <em class="learn-number" style="display: none;">3128人学习</em>
+                                    </div>
+                                    <div class="cf">
+                                        <div class="lessonicon-box" style="bottom: 4px;">
+                                            <a href="http://www.jikexueyuan.com/course/c/">
+                                                <img width="16" src="http://a1.jikexueyuan.com/home/201412/31/5d76/54a367ad6bae6.png" alt="c" title="C" jktag="&amp;posGP=101001&amp;posArea=0002&amp;posOper=1004&amp;aCId=2002&amp;posColumn=2002.1&amp;aCCate=c">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--  实战路径图页面构建 -->
+            <div id="projectpath">
+                <div class="learnbox w-1000 mar-t20" id="learn-way">
+                    <div class="index-public-title cf">
+                        <strong><a href="/practice/">实战路径图</a></strong>
+                        <i class="way">?</i>
+                        <a href="/practice/" class="more-lesson" target="_blank" jktag="&amp;posGP=101004&amp;posOper=1018&amp;posArea=0003&amp;posColumn=1.1">更多&gt;&gt;</a>
+                    </div>
+                    <div class="learn-card cf">
+
+                        <!--  a标签搭构每个路径图的外围容器 -->
+                        <a href="/practice/android/" target="_blank" jktag="&amp;posGP=101006&amp;posOper=1008&amp;posArea=0003&amp;posColumn=android.1&amp;aPrSlug=android" style="border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: solid none solid solid; border-top-color: rgb(228, 228, 228); border-bottom-color: rgb(228, 228, 228); border-left-color: rgb(228, 228, 228);">
+                            <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" alt="Android路径图" width="70" height="70">
+                            <h2>Android路径图</h2>
+                            <p>迅速掌握核心知识</p>
+                            <p>提升自身竞争力</p>
+                            <p>成为Android开发高手</p>
+                            <button class="greenbtn2">立即学习</button>
+                        </a>
+                        <a href="/practice/ios/" target="_blank" jktag="&amp;posGP=101006&amp;posOper=1008&amp;posArea=0003&amp;posColumn=ios.2&amp;aPrSlug=ios" style="border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: solid none solid solid; border-top-color: rgb(228, 228, 228); border-bottom-color: rgb(228, 228, 228); border-left-color: rgb(228, 228, 228);">
+                            <img src="http://wirrorcdn.jikexueyuan.com/picture/ios.png" alt="iOS路径图" width="70" height="70">
+                            <h2>iOS路径图</h2>
+                            <p>课程讲解细致入微</p>
+                            <p>迅速将知识应用到实战</p>
+                            <p>成为iOS开发工程师</p>
+                            <button class="greenbtn2">立即学习</button>
+                        </a>
+                        <a href="/practice/html5/" target="_blank" jktag="&amp;posGP=101006&amp;posOper=1008&amp;posArea=0003&amp;posColumn=html5.3&amp;aPrSlug=html5" style="border-left-width: 1px; border-style: solid none solid solid; border-left-color: rgb(228, 228, 228); border-top-width: 1px; border-bottom-width: 1px; border-top-color: rgb(228, 228, 228); border-bottom-color: rgb(228, 228, 228);">
+                            <img src="http://wirrorcdn.jikexueyuan.com/picture/html.png" alt="HTML5路径图" width="70" height="70">
+                            <h2>HTML5路径图</h2>
+                            <p>由易到难的实战案例</p>
+                            <p>迅速掌握技术精髓</p>
+                            <p>成为HTML5开发工程师</p>
+                            <button class="greenbtn2">立即学习</button>
+                        </a>
+                        <a href="/practice/cocos2d-x/" target="_blank" jktag="&amp;posGP=101006&amp;posOper=1008&amp;posArea=0003&amp;posColumn=cocos2d-x.4&amp;aPrSlug=cocos2d-x" style="border-left-width: 1px; border-style: solid none solid solid; border-left-color: rgb(228, 228, 228); border-top-width: 1px; border-bottom-width: 1px; border-top-color: rgb(228, 228, 228); border-bottom-color: rgb(228, 228, 228);">
+                            <img src="http://a1.jikexueyuan.com/home/201502/03/6d2b/54cfb5358d927.png" alt="Cocos2d-x路径图" width="70" height="70">
+                            <h2>Cocos2d-x路径图</h2>
+                            <p>最小可执行单元</p>
+                            <p>学习节奏灵活掌握</p>
+                            <p>变身Cocos2d-x游戏开发工程师</p>
+                            <button class="greenbtn2">立即学习</button>
+                        </a>
+                        <a href="javascript:void(0)" target="_blank" jktag="&amp;posGP=101006&amp;posOper=1008&amp;posArea=0003&amp;posColumn=unity3d.5&amp;aPrSlug=unity3d" style="border: 1px solid rgb(228, 228, 228);">
+                            <img src="http://wirrorcdn.jikexueyuan.com/picture/unity3d.png" alt="Unity3D" width="70" height="70">
+                            <h2>Unity3D</h2>
+                            <p>精英海归布道师</p>
+                            <p>讲授国外最先进技术</p>
+                            <p>让你从“小白”一跃成为“大拿”</p>
+                            <button id="Waiting-btn">即将开启</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  知识体系图页面构建 -->
+            <div id="system">
+                <div class="learnbox w-1000 mar-t20" id="learn-way">
+                <div class="index-public-title cf">
+                        <strong><a href="/practice/">知识体系图</a></strong>
+                        <i class="way">?</i>
+                        <a href="/practice/" class="more-lesson" target="_blank" jktag="&amp;posGP=101004&amp;posOper=1018&amp;posArea=0003&amp;posColumn=1.1">更多&gt;&gt;</a>
+                    </div>
+                    <div class="mapbox cf">
+                        <div class="mapbox-1200">
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/android/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=android.1&amp;aPaSlug=android">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/android.png" alt="Android" width="52">
+                                        <h2>Android</h2>
+                                        <span>77门课程</span>
+                                    </div>
+                                    <div class="back"><strong>791909人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/java/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=java.2&amp;aPaSlug=java">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/Java.png" alt="Java语言" width="52">
+                                        <h2>Java语言</h2>
+                                        <span>40门课程</span>
+                                    </div>
+                                    <div class="back"><strong>526735人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/html5/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=html5.3&amp;aPaSlug=html5">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/html.png" alt="HTML5开发" width="52">
+                                        <h2>HTML5开发</h2>
+                                        <span>106门课程</span>
+                                    </div>
+                                    <div class="back"><strong>1375423人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/javaweb/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=javaweb.4&amp;aPaSlug=javaweb">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201503/13/7361/55028a07c02d1.jpg" alt="Java Web" width="52">
+                                        <h2>Java Web</h2>
+                                        <span>65门课程</span>
+                                    </div>
+                                    <div class="back"><strong>519371人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/php/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=php.5&amp;aPaSlug=php">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/php.png" alt="PHP语言" width="52">
+                                        <h2>PHP语言</h2>
+                                        <span>41门课程</span>
+                                    </div>
+                                    <div class="back"><strong>289342人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/ios/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=ios.6&amp;aPaSlug=ios">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/ios.png" alt="iOS开发" width="52">
+                                        <h2>iOS开发</h2>
+                                        <span>34门课程</span>
+                                    </div>
+                                    <div class="back"><strong>296096人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/c/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=c.7&amp;aPaSlug=c">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/c.png" alt="C语言" width="52">
+                                        <h2>C语言</h2>
+                                        <span>15门课程</span>
+                                    </div>
+                                    <div class="back"><strong>192246人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/csharp/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=csharp.8&amp;aPaSlug=csharp">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201502/03/de90/54cfb5a451bbd.png" alt="C#" width="52">
+                                        <h2>C#</h2>
+                                        <span>23门课程</span>
+                                    </div>
+                                    <div class="back"><strong>102650人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/bootstrap/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=bootstrap.9&amp;aPaSlug=bootstrap">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201502/11/e099/54dab77e7b38a.png" alt="Bootstrap" width="52">
+                                        <h2>Bootstrap</h2>
+                                        <span>11门课程</span>
+                                    </div>
+                                    <div class="back"><strong>143976人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/unity3d/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=unity3d.10&amp;aPaSlug=unity3d">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201503/03/73b3/54f56c854161d.png" alt="Unity3D" width="52">
+                                        <h2>Unity3D</h2>
+                                        <span>44门课程</span>
+                                    </div>
+                                    <div class="back"><strong>210466人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/egret/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=egret.11&amp;aPaSlug=egret">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201501/26/5e2f/54c5ebe62c7e9.png" alt="Egret" width="52">
+                                        <h2>Egret</h2>
+                                        <span>7门课程</span>
+                                    </div>
+                                    <div class="back"><strong>19515人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/swift/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=swift.12&amp;aPaSlug=swift">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/swift.png" alt="Swift语言" width="52">
+                                        <h2>Swift语言</h2>
+                                        <span>6门课程</span>
+                                    </div>
+                                    <div class="back"><strong>60499人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/cocos2d-x/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=cocos2d-x.13&amp;aPaSlug=cocos2d-x">
+                                    <div class="front">
+                                        <img src="http://wirrorcdn.jikexueyuan.com/picture/Cocos2d-x.png" alt="Cocos2d-x游戏开发" width="52">
+                                        <h2>Cocos2d-x游戏开发</h2>
+                                        <span>90门课程</span>
+                                    </div>
+                                    <div class="back"><strong>558287人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/msoffice/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=msoffice.14&amp;aPaSlug=msoffice">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201503/16/0838/55063dcc9bfe5.jpg" alt="计算机一级" width="52">
+                                        <h2>计算机一级</h2>
+                                        <span>7门课程</span>
+                                    </div>
+                                    <div class="back"><strong>29848人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/ncrec/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=ncrec.15&amp;aPaSlug=ncrec">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201503/16/c7e2/55063db66c32d.jpg" alt="计算机二级" width="52">
+                                        <h2>计算机二级</h2>
+                                        <span>25门课程</span>
+                                    </div>
+                                    <div class="back"><strong>136775人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/watchkit/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=watchkit.16&amp;aPaSlug=watchkit">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201504/01/c6c8/551b5d8b3619d.png" alt="WatchKit开发" width="52">
+                                        <h2>WatchKit开发</h2>
+                                        <span>5门课程</span>
+                                    </div>
+                                    <div class="back"><strong>16664人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/gui/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=gui.17&amp;aPaSlug=gui">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201504/21/0088/5535fe5532a6f.png" alt="GUI" width="52">
+                                        <h2>GUI</h2>
+                                        <span>27门课程</span>
+                                    </div>
+                                    <div class="back"><strong>112404人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/aspdotnet/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=aspdotnet.18&amp;aPaSlug=aspdotnet">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201412/19/99dc/5493e484b125e.png" alt="Asp.Net" width="52">
+                                        <h2>Asp.Net</h2>
+                                        <span>61门课程</span>
+                                    </div>
+                                    <div class="back"><strong>417849人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/web/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=web.19&amp;aPaSlug=web">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201504/29/2acb/5540424e76332.png" alt="Web前端" width="52">
+                                        <h2>Web前端</h2>
+                                        <span>180门课程</span>
+                                    </div>
+                                    <div class="back"><strong>1492812人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/python/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=python.20&amp;aPaSlug=python">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201411/04/921d/5457d0aee9018.png" alt="Python" width="52">
+                                        <h2>Python</h2>
+                                        <span>48门课程</span>
+                                    </div>
+                                    <div class="back"><strong>248832人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/docker/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=docker.21&amp;aPaSlug=docker">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201505/12/93b9/55519f5fc3333.png" alt="Docker" width="52">
+                                        <h2>Docker</h2>
+                                        <span>9门课程</span>
+                                    </div>
+                                    <div class="back"><strong>27841人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/arduino/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=arduino.22&amp;aPaSlug=arduino">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201505/14/e97a/5553fd84d5963.png" alt="Arduino" width="52">
+                                        <h2>Arduino</h2>
+                                        <span>11门课程</span>
+                                    </div>
+                                    <div class="back"><strong>37699人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/uiautomator/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=uiautomator.23&amp;aPaSlug=uiautomator">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201505/27/06dd/556543603b3e8.png" alt="Android UiAutomator" width="52">
+                                        <h2>Android UiAutomator</h2>
+                                        <span>20门课程</span>
+                                    </div>
+                                    <div class="back"><strong>64488人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-transform">
+                                <a href="http://www.jikexueyuan.com/path/jwoccupation/" class="flipper" target="_blank" jktag="&amp;posGP=101005&amp;posOper=1010&amp;posArea=0004&amp;posColumn=jwoccupation.24&amp;aPaSlug=jwoccupation">
+                                    <div class="front">
+                                        <img src="http://a1.jikexueyuan.com/home/201507/02/151e/5594956f5793e.png" alt="Java Web 职业路径图" width="52">
+                                        <h2>Java Web 职业路径图</h2>
+                                        <span>81门课程</span>
+                                    </div>
+                                    <div class="back"><strong>716327人已学习</strong>
+                                        <!--<span></span>-->
+                                        <button class="greenbtn">立即学习</button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  战略合作企业轮播图框架 -->
+            <div id="enterprise">
+                <div class="learnbox w-1000 mar-t40">
+                    <div class="index-public-title cf">
+                        <strong>战略合作企业</strong>
+                        <a href="/partner" class="more-lesson" target="_blank" jktag="&amp;posGP=107001&amp;posOper=1014&amp;posArea=0005&amp;posColumn=1.1">更多&gt;&gt;</a>
+                    </div>
+                    <div class="strategy w-1000">
+                        <div class="startegy-box">
+                            <span id="banner-left3" class="arrow-left" style="display: none;"></span>
+                            <span id="banner-right3" class="arrow-right" style="display: none;"></span>
+                            <div class="swiper-container swiper-strategy">
+                                <img src="./bottom-1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  合作院校轮播图框架 -->
+            <div id="university">
+                <div class="learnbox w-1000 mar-t40">
+                    <div class="index-public-title cf">
+                        <strong>合作院校</strong>
+                        <a href="http://mooc.jikexueyuan.com/" class="more-lesson" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    <div class="swiper-car-box ">
+                        <span id="banner-left2" class="arrow-left" style="display: none;"></span>
+                        <span id="banner-right2" class="arrow-right" style="display: none;"></span>
+                        <div class="swiper-container swiper-car">
+                            <img src="./bottom-2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  合作媒体轮播图框架 -->
+            <div class="learnbox w-1000 mar-t40">
+                <div class="index-public-title cf">
+                    <strong>媒体报道</strong>
+                    <!--<a href="http://www.jikexueyuan.com/partner" class="more-lesson" target="_blank" jktag="&posGP=107001&posOper=1014&posArea=0005&posColumn=1.1">更多&gt;&gt;</a>-->
+                </div>
+                <div class="strategy2 w-1000">
+                    <div class="startegy-box">
+                        <span id="banner-left4" class="arrow-left" style="display: none;"></span>
+                        <span id="banner-right4" class="arrow-right" style="display: none;"></span>
+                        <div class="swiper-container swiper-strategy">
+                            <img src="./bottom-3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  底部的搭建以及内部结构 -->
+        <div id="footer" class="mar-t50">
+            <div class=" jkinfor-block">
+                <div class="jkinfor cf">
+                    <dl>
+                        <dt><a target="_blank" href="http://www.jikexueyuan.com/course/" jktag="&amp;posGP=101001&amp;posArea=9005&amp;posOper=900027">极客学院</a></dt>
+                        <dd>·<a target="_blank" href="http://www.jikexueyuan.com/course/" jktag="&amp;posGP=101001&amp;posArea=9005&amp;posOper=900027">职业课程库</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/path/" jktag="&amp;posGP=101003&amp;posArea=9005&amp;posOper=900027">知识体系图</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/practice/" jktag="&amp;posGP=101004&amp;posArea=9005&amp;posOper=900027">实战路径图</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/partner/" jktag="107001&amp;posGP=&amp;posArea=9005&amp;posOper=900027">企业课程</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/resources/" jktag="&amp;posGP=108001&amp;posArea=9005&amp;posOper=900027">资源下载</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/tag/" jktag="&amp;posGP=105002&amp;posArea=9005&amp;posOper=900027">课程标签</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a target="_blank" href=" http://www.jikexueyuan.com/member/freevip.html" jktag="&amp;posGP=115002&amp;posArea=9005&amp;posOper=900027">网站服务</a></dt>
+                        <dd>·<a target="_blank" href=" http://press.jikexueyuan.com/topic/" jktag="&amp;posArea=9005&amp;posOper=900027">课程需求</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/member/freevip.html" jktag="&amp;posGP=115002&amp;posArea=9005&amp;posOper=900027">免费体验VIP</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/blog/" jktag="&amp;posGP=109001&amp;posArea=9005&amp;posOper=900027">黑板报</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/sitemap.html" jktag="&amp;posGP=116001&amp;posArea=9005&amp;posOper=900027">网站地图</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a target="_blank" href=" http://www.jikexueyuan.com/question/" jktag="&amp;posGP=104002&amp;posArea=9005&amp;posOper=900027">帮助中心</a></dt>
+                        <dd>·<a target="_blank" href="http://wenda.jikexueyuan.com/" jktag="&amp;posGP=104002&amp;posArea=9005&amp;posOper=900027">技术问答</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/vip/" jktag="&amp;posGP=114001&amp;posArea=9005&amp;posOper=900027">VIP权益</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/faq.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">常见问题</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/service.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">服务条款</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/copyright.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">版权声明</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/disclaimer.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">免责声明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a target="_blank" href=" http://www.jikexueyuan.com/help/about.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">交流合作</a></dt>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/about.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">关于我们</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/contact.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">联系我们</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/join.html" jktag="&amp;posGP=110001&amp;posArea=9005&amp;posOper=900027">社会招聘</a></dd>
+                        <dd>·<a target="_blank" href=" http://press.jikexueyuan.com/evangelist/apply.html" jktag="&amp;posArea=9005&amp;posOper=900027">布道师招募</a></dd>
+                        <dd>·<a target="_blank" href="mailto:hey@jikexueyuan.com?subject=业务咨询合作" rel="nofollow" jktag="&amp;posArea=9005&amp;posOper=900027">合作咨询</a></dd>
+                        <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/friendlink.html" jktag="&amp;posGP=113003&amp;posArea=9005&amp;posOper=900027">友情链接</a></dd>
+                        <dd>·<a target="_blank" href=" http://jiuye.jikexueyuan.com/assistant/apply">极客助教招募</a></dd>
+                    </dl>
+                    <div class="search-share">
+                        <strong class="jktxt">极客学院，编程是一种信仰！</strong>
+                        <div class="app-download">
+                            <a target="_blank" href=" http://www.jikexueyuan.com/app/" jktag="&amp;posGP=116001&amp;posArea=9005&amp;posOper=900024">
+                                <img src="http://s1.jikexueyuan.com/common/images/iphone_ecb3977.png" width="21">
+                                <div>
+                                    <strong>手机客户端</strong>
+                                    <p>离线缓存 随时学习</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="share">
+                            <a href="http://weibo.com/jikexueyuan" class="sina-icon" rel="nofollow" target="_blank" jktag="&amp;posArea=9005&amp;posOper=900025"></a>
+                            <a href="http://tieba.baidu.com/f?kw=%BC%AB%BF%CD%D1%A7%D4%BA&amp;fr=index" title="极客学院官方百度贴吧" class="tieba-icon" rel="nofollow" target="_blank" jktag="&amp;posArea=9005&amp;posOper=900026"></a>
+                            <a href="javascript:void(0);" class="qq-icon" rel="nofollow" jktag="&amp;posArea=9005&amp;posOper=900030">
+                            </a>
+                        </div>
+                        <div class="kefu-online">
+                            <a href="http://chat.meiqia.com/widget/phone/ticket.html?unitid=7594&amp;theme=initial&amp;specifyGr=0&amp;&amp;cookie=006600144292271712897315&amp;_realref_=http%3A%2F%2Fwww.jikexueyuan.com%2F" target="_blank" jktag="&amp;posArea=9005&amp;posOper=900031" rel="nofollow">
+                                <div class="kefu-icon online"></div>
+                                <h5>联系我们</h5>
+                                <p>工作日9:00-21:00在线</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1000 copyright">
+                Copyright © 2013-2015 <strong><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a></strong>&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802013056
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
