@@ -1,0 +1,67 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+    background-image: url(./images/beijing.gif);
+    /*background-color: #0D7792;*/
+    /*color: #0D7792;*/
+}
+
+td {
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #0D7792;
+}
+
+
+
+a:link {
+    color: #ff0099;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a.link{
+	color: #0000ff;
+}
+
+a.link:hover{
+    color: #ff0000;
+}
+
+.nav_bar{
+    color: #ff0099;
+    text-decoration: none;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.titleinfo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p13 {
+    font-size: 13px;
+    line-height: 150%;
+    color: #000000;
+}
+
+

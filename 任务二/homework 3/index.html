@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body link="#0000cc">
+    <div id="wrapper" style="display:none;">
+        <div id="head">
+            <div class="head_wrapper">
+                <div class="s_form">
+                    <div class="s_form_wrapper">
+                        <div id="lg"><img hidefocus="true" src="./logo.png" width="270" height="129" usemap="#mp" alt="百度logo">
+                        </div>
+                        <form id="form" name="f" action="/s" class="fm">
+                            <span class="bg s_ipt_wr"><input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off"></span><span class="bg s_btn_wr"><input type="submit" id="su" value="百度一下" class="bg s_btn"></span><span class="tools"><span id="mHolder"><div id="mCon"><span>输入法</span></div>
+                    <ul id="mMenu">
+                        <li><a href="javascript:;" name="ime_hw">手写</a></li>
+                        <li><a href="javascript:;" name="ime_py">拼音</a></li>
+                        <li class="ln"></li>
+                        <li><a href="javascript:;" name="ime_cl">关闭</a></li>
+                    </ul>
+                    </span>
+                    </span>
+                    <input type="hidden" name="rn" value="">
+                    <input type="hidden" name="oq" value="">
+                    <input type="hidden" name="rsv_pq" value="93ab8b1c0001061f">
+                    <input type="hidden" name="rsv_t" value="46db2fh7xAZ3lRUSAHAhbrbbnPzQOQRiCEFMqyqyn/HNwAx7Evtis50RA6E">
+                    </form>
+                    <div id="m"></div>
+                </div>
+            </div>
+            <div id="u"><a class="toindex" href="/">百度首页</a><a href="javascript:;" name="tj_settingicon" class="pf">设置<i class="c-icon c-icon-triangle-down"></i></a><a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" name="tj_login" class="lb" onclick="return false;">登录</a></div>
+            <div id="u1"><a href="http://news.baidu.com" name="tj_trnews" class="mnav">新闻</a><a href="http://www.hao123.com" name="tj_trhao123" class="mnav">hao123</a><a href="http://map.baidu.com" name="tj_trmap" class="mnav">地图</a><a href="http://v.baidu.com" name="tj_trvideo" class="mnav">视频</a><a href="http://tieba.baidu.com" name="tj_trtieba" class="mnav">贴吧</a><a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F" name="tj_login" class="lb" onclick="return false;">登录</a><a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="pf" class="">设置</a><a href="http://www.baidu.com/more/" name="tj_briicon" class="bri" style="display: block;">更多产品</a></div>
+        </div>
+    </div>
+    <div class="s_tab" id="s_tab"><b>网页</b><a href="http://news.baidu.com/ns?cl=2&rn=20&tn=news&word=" wdfield="word" onmousedown="return c({'fm':'tab','tab':'news'})">新闻</a><a href="http://tieba.baidu.com/f?kw=&fr=wwwt" wdfield="kw" onmousedown="return c({'fm':'tab','tab':'tieba'})">贴吧</a><a href="http://zhidao.baidu.com/q?ct=17&pn=0&tn=ikaslist&rn=10&word=&fr=wwwt" wdfield="word" onmousedown="return c({'fm':'tab','tab':'zhidao'})">知道</a><a href="http://music.baidu.com/search?fr=ps&ie=utf-8&key=" wdfield="key" onmousedown="return c({'fm':'tab','tab':'music'})">音乐</a><a href="http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=" wdfield="word" onmousedown="return c({'fm':'tab','tab':'pic'})">图片</a><a href="http://v.baidu.com/v?ct=301989888&rn=20&pn=0&db=0&s=25&ie=utf-8&word=" wdfield="word" onmousedown="return c({'fm':'tab','tab':'video'})">视频</a><a href="http://map.baidu.com/m?word=&fr=ps01000" wdfield="word" onmousedown="return c({'fm':'tab','tab':'map'})">地图</a><a href="http://wenku.baidu.com/search?word=&lm=0&od=0&ie=utf-8" wdfield="word" onmousedown="return c({'fm':'tab','tab':'wenku'})">文库</a><a href="//www.baidu.com/more/" onmousedown="return c({'fm':'tab','tab':'more'})">更多»</a></div>
+    <div id="ftCon">
+        <div id="ftConw">
+            <p id="lh"><a id="seth" onClick="h(this)" href="/" onmousedown="return ns_c({'fm':'behs','tab':'homepage','pos':0})">把百度设为主页</a><a id="setf" href="//www.baidu.com/cache/sethelp/help.html" onmousedown="return ns_c({'fm':'behs','tab':'favorites','pos':0})" target="_blank">把百度设为主页</a><a onmousedown="return ns_c({'fm':'behs','tab':'tj_about'})" href="http://home.baidu.com">关于百度</a><a onmousedown="return ns_c({'fm':'behs','tab':'tj_about_en'})" href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a></p>
+            <p id="cp">&copy;2015&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/" onmousedown="return ns_c({'fm':'behs','tab':'tj_duty'})">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/" class="cp-feedback" onmousedown="return ns_c({'fm':'behs','tab':'tj_homefb'})">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i></p>
+        </div>
+    </div>
+    <div id="wrapper_wrapper"></div>
+    </div>
+    <div class="c-tips-container" id="c-tips-container"></div>
+    <script>
+    window.__async_strategy = 2;
+    </script>
+    <script>
+    var bds = {
+        se: {},
+        su: {
+            urdata: [],
+            urSendClick: function() {}
+        },
+        util: {},
+        use: {},
+        comm: {
+            domain: "http://www.baidu.com",
+            ubsurl: "http://sclick.baidu.com/w.gif",
+            tn: "baidu",
+            queryEnc: "",
+            queryId: "",
+            inter: "",
+            templateName: "",
+            sugHost: "http://suggestion.baidu.com/su",
+            query: "",
+            qid: "93ab8b1c0001061f",
+            cid: "0",
+            sid: "1990_1451_16572_17155_12824_14431_12868_17105_14955_17001_17003_17072_15602_12167_13932_17051",
+            indexSid: "1990_1451_16572_17155_12824_14431_12868_17105_14955_17001_17003_17072_15602_12167_13932_17051",
+            stoken: "",
+            serverTime: "1441873871",
+            user: "",
+            username: "",
+            userid: "0",
+            isBaixiaoduOn: "",
+            loginAction: [],
+            useFavo: "",
+            pinyin: "",
+            favoOn: "",
+            cookie: {
+                "BIDUPSID": "62E852F303E3CB03BC6AD9C15D38577F",
+                "PSTM": "1440146410",
+                "BAIDUID": "AD9BBC06FCCF4D1D365CB608F15EEFFE:FG=1",
+                "BD_HOME": "0",
+                "H_PS_PSSID": "1990_1451_16572_17155_12824_14431_12868_17105_14955_17001_17003_17072_15602_12167_13932_17051",
+                "BD_UPN": "12314353",
+                "plus_lsv": "bd4b61a8aedc0439",
+                "H_WISE_SIDS": "100576_100558_100118_100191_117_100040_100263_100291",
+                "PLUS": "1"
+            },
+            userAgent: "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36",
+            curResultNum: "0",
+            rightResultExist: false,
+            protectNum: 0,
+            zxlNum: 0,
+            pageNum: 1,
+            pageSize: 10,
+            newindex: 0,
+            async: 2,
+            maxPreloadThread: 5,
+            maxPreloadTimes: 10,
+            preloadMouseMoveDistance: 5,
+            switchAddMask: false,
+            isDebug: false,
+            ishome: 1,
+            flagTranslateResult: 0,
+            globalLogFlag: 0,
+            encTn: '46db2fh7xAZ3lRUSAHAhbrbbnPzQOQRiCEFMqyqyn/HNwAx7Evtis50RA6E'
+        }
+    };
+    var name, navigate, al_arr = [];
+    var selfOpen = window.open;
+    eval("var open = selfOpen;");
+    var isIE = navigator.userAgent.indexOf("MSIE") != -1 && !window.opera;
+    var E = bds.ecom = {};
+    bds.se.mon = {
+        'loadedItems': [],
+        'load': function() {},
+        'srvt': -1
+    };
+    try {
+        bds.se.mon.srvt = parseInt(document.cookie.match(new RegExp("(^| )BDSVRTM=([^;]*)(;|$)"))[2]);
+        document.cookie = "BDSVRTM=;expires=Sat, 01 Jan 2000 00:00:00 GMT";
+    } catch (e) {}
+    var bdUser = bds.comm.user ? bds.comm.user : null,
+        bdQuery = bds.comm.query,
+        bdUseFavo = bds.comm.useFavo,
+        bdFavoOn = bds.comm.favoOn,
+        bdCid = bds.comm.cid,
+        bdSid = bds.comm.sid,
+        bdServerTime = bds.comm.serverTime,
+        bdQid = bds.comm.queryId,
+        bdstoken = bds.comm.stoken,
+        login_success = [];
+    bds.util.domain = (function() {
+        var list = {
+            "graph.baidu.com": "http://graph.baidu.com",
+            "p.qiao.baidu.com": "http://p.qiao.baidu.com",
+            "vse.baidu.com": "http://vse.baidu.com",
+            "hdpreload.baidu.com": "http://hdpreload.baidu.com",
+            "lcr.open.baidu.com": "http://lcr.open.baidu.com",
+            "kankan.baidu.com": "http://kankan.baidu.com",
+            "xapp.baidu.com": "http://xapp.baidu.com",
+            "dr.dh.baidu.com": "http://dr.dh.baidu.com",
+            "xiaodu.baidu.com": "http://xiaodu.baidu.com",
+            "sensearch.baidu.com": "http://sensearch.baidu.com",
+            "s1.bdstatic.com": "http://s1.bdstatic.com",
+            "olime.baidu.com": "http://olime.baidu.com",
+            "app.baidu.com": "http://app.baidu.com",
+            "i.baidu.com": "http://i.baidu.com",
+            "c.baidu.com": "http://c.baidu.com",
+            "sclick.baidu.com": "http://sclick.baidu.com",
+            "nsclick.baidu.com": "http://nsclick.baidu.com",
+            "eclick.baidu.com": "http://eclick.baidu.com",
+            "api.map.baidu.com": "http://api.map.baidu.com",
+            "ecma.bdimg.com": "http://ecma.bdimg.com",
+            "ecmb.bdimg.com": "http://ecmb.bdimg.com",
+            "t1.baidu.com": "http://t1.baidu.com",
+            "t2.baidu.com": "http://t2.baidu.com",
+            "t3.baidu.com": "http://t3.baidu.com",
+            "t10.baidu.com": "http://t10.baidu.com",
+            "t11.baidu.com": "http://t11.baidu.com",
+            "t12.baidu.com": "http://t12.baidu.com",
+            "i7.baidu.com": "http://i7.baidu.com",
+            "i8.baidu.com": "http://i8.baidu.com",
+            "i9.baidu.com": "http://i9.baidu.com",
+            "b1.bdstatic.com": "http://b1.bdstatic.com",
+            "ss.bdimg.com": "http://ss.bdimg.com",
+            "opendata.baidu.com": "http://opendata.baidu.com",
+            "api.open.baidu.com": "http://api.open.baidu.com",
+            "tag.baidu.com": "http://tag.baidu.com",
+            "f3.baidu.com": "http://f3.baidu.com",
+            "s.share.baidu.com": "http://s.share.baidu.com",
+            "bdimg.share.baidu.com": "http://bdimg.share.baidu.com",
+            "1.su.bdimg.com": "http://1.su.bdimg.com",
+            "2.su.bdimg.com": "http://2.su.bdimg.com",
+            "3.su.bdimg.com": "http://3.su.bdimg.com",
+            "4.su.bdimg.com": "http://4.su.bdimg.com",
+            "5.su.bdimg.com": "http://5.su.bdimg.com",
+            "6.su.bdimg.com": "http://6.su.bdimg.com",
+            "7.su.bdimg.com": "http://7.su.bdimg.com",
+            "8.su.bdimg.com": "http://8.su.bdimg.com"
+        };
+        var get = function(url) {
+                if (location.protocol === "http") {
+                    return url;
+                }
+                var reg = /^(http[s]?:\/\/)?([^\/]+)(.*)/,
+                    matches = url.match(reg);
+                url = list.hasOwnProperty(matches[2]) && (list[matches[2]] + matches[3]) || url;
+                return url;
+            },
+            set = function(kdomain, vdomain) {
+                list[kdomain] = vdomain;
+            };
+        return {
+            get: get,
+            set: set
+        }
+    })();
+    </script>
+    <script>
+    if (!location.hash.match(/[^a-zA-Z0-9]wd=/)) {
+        document.getElementById("wrapper").style.display = 'block';
+        setTimeout(function() {
+            try {
+                var kw = document.getElementById("kw");
+                kw.focus();
+                kw.parentNode.className = "bg s_ipt_wr iptfocus quickdelete-wrap";
+            } catch (e) {}
+        }, 0);
+    }
+    </script>
+    <script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+    <script type="text/javascript">
+    var Cookie = {
+        set: function(c, e, d, f, a, b) {
+            document.cookie = c + "=" + (b ? e : escape(e)) + ((a) ? "; expires=" + a.toGMTString() : "") + ((f) ? "; path=" + f : "; path=/") + ((d) ? "; domain=" + d : "")
+        },
+        get: function(c, b) {
+            var a = document.cookie.match(new RegExp("(^| )" + c + "=([^;]*)(;|$)"));
+            if (a != null) {
+                return unescape(a[2])
+            }
+            return b
+        },
+        clear: function(a, c, b) {
+            if (this.get(a)) {
+                document.cookie = a + "=" + ((c) ? "; path=" + c : "; path=/") + ((b) ? "; domain=" + b : "") + ";expires=Fri, 02-Jan-1970 00:00:00 GMT"
+            }
+        }
+    };
+    (function() {
+        var defaultOptions = {
+                sugSet: 1,
+                sugStoreSet: 1,
+                isSwitch: 1,
+                isJumpHttps: 1,
+                imeSwitch: 0,
+                resultNum: 10,
+                skinOpen: 1,
+                resultLang: 0,
+                duRobotState: "000"
+            },
+            options = {},
+            tmpName;
+        var expire30y = new Date();
+        expire30y.setTime(expire30y.getTime() + 30 * 365 * 86400000);
+        try {
+            if (bds && bds.comm && bds.comm.personalData) {
+                if (typeof bds.comm.personalData == "string") {
+                    bds.comm.personalData = eval("(" + bds.comm.personalData + ")")
+                }
+                if (!bds.comm.personalData) {
+                    return
+                }
+                for (tmpName in bds.comm.personalData) {
+                    if (defaultOptions.hasOwnProperty(tmpName) && bds.comm.personalData.hasOwnProperty(tmpName)) {
+                        if (bds.comm.personalData[tmpName].ErrMsg == "SUCCESS") {
+                            options[tmpName] = bds.comm.personalData[tmpName].value
+                        }
+                    }
+                }
+            }
+            try {
+                if (!parseInt(options.resultNum)) {
+                    delete(options.resultNum)
+                }
+                if (!parseInt(options.resultLang) && options.resultLang != "0") {
+                    delete(options.resultLang)
+                }
+            } catch (e) {}
+            writeCookie();
+            if (!("sugSet" in options)) {
+                options.sugSet = (Cookie.get("sug", 3) != 3 ? 0 : 1)
+            }
+            if (!("sugStoreSet" in options)) {
+                options.sugStoreSet = Cookie.get("sugstore", 0)
+            }
+            var BAIDUID = Cookie.get("BAIDUID");
+            if (!("resultNum" in options)) {
+                if (/NR=(\d+)/.test(BAIDUID)) {
+                    options.resultNum = RegExp.$1 ? parseInt(RegExp.$1) : 10
+                } else {
+                    options.resultNum = 10
+                }
+            }
+            if (!("resultLang" in options)) {
+                if (/SL=(\d+)/.test(BAIDUID)) {
+                    options.resultLang = RegExp.$1 ? parseInt(RegExp.$1) : 0
+                } else {
+                    options.resultLang = 0
+                }
+            }
+            if (!("isSwitch" in options)) {
+                options.isSwitch = (Cookie.get("ORIGIN", 0) == 2 ? 0 : (Cookie.get("ORIGIN", 0) == 1 ? 2 : 1))
+            }
+            if (!("imeSwitch" in options)) {
+                options.imeSwitch = Cookie.get("bdime", 0)
+            }
+        } catch (e) {}
+
+        function save(callback) {
+            var optionsStr = [];
+            for (tmpName in options) {
+                if (options.hasOwnProperty(tmpName)) {
+                    optionsStr.push('"' + tmpName + '":"' + options[tmpName] + '"')
+                }
+            }
+            var str = "{" + optionsStr.join(",") + "}";
+            if (bds.comm.personalData) {
+                $.ajax({
+                    url: "//www.baidu.com/ups/submit/addtips/?product=ps&tips=" + encodeURIComponent(str) + "&_r=" + new Date().getTime(),
+                    success: function() {
+                        writeCookie();
+                        if (typeof callback == "function") {
+                            callback()
+                        }
+                    }
+                })
+            } else {
+                writeCookie();
+                if (typeof callback == "function") {
+                    setTimeout(callback, 0)
+                }
+            }
+        }
+
+        function set(optionName, value) {
+            options[optionName] = value
+        }
+
+        function get(optionName) {
+            return options[optionName]
+        }
+
+        function writeCookie() {
+            if (options.hasOwnProperty("sugSet")) {
+                var value = options.sugSet == "0" ? "0" : "3";
+                clearCookie("sug");
+                Cookie.set("sug", value, document.domain, "/", expire30y)
+            }
+            if (options.hasOwnProperty("sugStoreSet")) {
+                var value = options.sugStoreSet == 0 ? "0" : "1";
+                clearCookie("sugstore");
+                Cookie.set("sugstore", value, document.domain, "/", expire30y)
+            }
+            if (options.hasOwnProperty("isSwitch")) {
+                var ORINGIN_MAP = {
+                    0: "2",
+                    1: "0",
+                    2: "1"
+                };
+                var value = ORINGIN_MAP[options.isSwitch];
+                clearCookie("ORIGIN");
+                Cookie.set("ORIGIN", value, document.domain, "/", expire30y)
+            }
+            if (options.hasOwnProperty("imeSwitch")) {
+                var value = options.imeSwitch;
+                clearCookie("bdime");
+                Cookie.set("bdime", value, document.domain, "/", expire30y)
+            }
+        }
+
+        function writeBAIDUID() {
+            var BAIDUID = Cookie.get("BAIDUID"),
+                NR, FG, SL;
+            if (/FG=(\d+)/.test(BAIDUID)) {
+                FG = RegExp.$1
+            }
+            if (/SL=(\d+)/.test(BAIDUID)) {
+                SL = RegExp.$1
+            }
+            if (/NR=(\d+)/.test(BAIDUID)) {
+                NR = RegExp.$1
+            }
+            if (options.hasOwnProperty("resultNum")) {
+                NR = options.resultNum
+            }
+            if (options.hasOwnProperty("resultLang")) {
+                SL = options.resultLang
+            }
+            Cookie.set("BAIDUID", BAIDUID.replace(/:.*$/, "") + (typeof SL != "undefined" ? ":SL=" + SL : "") + (typeof NR != "undefined" ? ":NR=" + NR : "") + (typeof FG != "undefined" ? ":FG=" + FG : ""), ".baidu.com", "/", expire30y, true)
+        }
+
+        function clearCookie(name) {
+            Cookie.clear(name, "/");
+            Cookie.clear(name, "/", document.domain);
+            Cookie.clear(name, "/", "." + document.domain);
+            Cookie.clear(name, "/", ".baidu.com")
+        }
+
+        function reset(callback) {
+            options = defaultOptions;
+            save(callback)
+        }
+        window.UPS = {
+            writeBAIDUID: writeBAIDUID,
+            reset: reset,
+            get: get,
+            set: set,
+            save: save
+        }
+    })();
+    (function() {
+        var c = (navigator && navigator.userAgent) ? navigator.userAgent : "";
+        var b = (document && document.cookie) ? document.cookie : "";
+        var a = !!(c.match(/(msie [2-8])/i) || (c.match(/windows.*safari/i) && !c.match(/chrome/i)) || c.match(/(linux.*firefox)/i) || c.match(/Chrome\/29/i) || c.match(/mac os x.*firefox/i) || b.match(/\bISSW=1/) || UPS.get("isSwitch") == 0);
+        if (bds && bds.comm) {
+            bds.comm.supportis = !a;
+            bds.comm.isui = true
+        }
+        window.__restart_confirm_timeout = true;
+        window.__confirm_timeout = 8000;
+        window.__disable_is_guide = true;
+        window.__disable_swap_to_empty = true;
+        window.__switch_add_mask = true;
+        if (window._async_merge) {
+            a = true;
+            bds.comm.supportis = false;
+            document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_popstate1_00d58b1d.js'><\/script>")
+        } else {
+            if (window._async_his) {
+                a = true;
+                bds.comm.supportis = false;
+                document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_search_4f472a39.js'><\/script>")
+            } else {
+                if (window._sam_rcmd) {
+                    document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_search_rcmd_4858bc3f.js'><\/script>")
+                } else {
+                    document.write("<script src='http://s1.bdstatic.com/r/www/cache/static/global/js/all_async_search_4f472a39.js'><\/script>")
+                }
+            }
+        }
+        if (bds.comm.newindex) {
+            $(window).on("index_off", function() {
+                $('<div class="c-tips-container" id="c-tips-container"></div>').insertAfter("#wrapper");
+                if (window.__sample_dynamic_tab) {
+                    $("#s_tab").remove()
+                }
+            })
+        }
+        if (!c.match(/(msie 6)/i)) {
+            $(function() {
+                setTimeout(function() {
+                    $.ajax({
+                        url: "http://s1.bdstatic.com/r/www/cache/static/baiduia/baiduia_b45d552b.js",
+                        cache: true,
+                        dataType: "script"
+                    })
+                }, 0)
+            })
+        }
+        $(function() {
+            var d = "http://s1.bdstatic.com/r/www/cache/static/plugins/every_cookie_9876b8b5.js";
+            if ((navigator.platform == "Mac68K") || (navigator.platform == "MacPPC") || (navigator.platform == "Macintosh") || (navigator.platform == "MacIntel")) {
+                d = "http://s1.bdstatic.com/r/www/cache/static/plugins/every_cookie_mac_92a532a1.js"
+            }
+            setTimeout(function() {
+                $.ajax({
+                    url: d,
+                    cache: true,
+                    dataType: "script"
+                })
+            }, 0)
+        });
+        if (bds.comm && bds.comm.ishome && Cookie.get("H_PS_PSSID")) {
+            bds.comm.indexSid = Cookie.get("H_PS_PSSID")
+        }
+    })();
+    </script>
+</body>
+
+</html>
